@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResearchProjectDefs>
+
+	<ResearchProjectDef>
+		<defName>RIF_Research_TribalTech</defName>
+		<label>Tribal Technology</label>
+		<description>Your people are now more capable than animals, YAY!</description>
+		<baseCost>150</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<tags>
+			<li>TribalStart</li>
+			<li>MedievalStart</li>
+			<li>ClassicStart</li>
+		</tags>
+		<tab>Main</tab>
+		<researchViewX>0</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>RIF_TribalStonecutting</defName>
+		<label>Stone Chipping</label>
+		<description>Allows you to assign a stone chipping spot to create stone blocks.</description>
+		<baseCost>100</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<tags>
+			<li>TribalStart</li>
+			<li>MedievalStart</li>
+			<li>ClassicStart</li>
+		</tags>
+		<tab>Main</tab>
+		<prerequisites>
+			<li>RIF_Research_TribalTech</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+
+</ResearchProjectDefs>

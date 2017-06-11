@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="BrainSurgery"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>BrainSurgery</defName>
+				<label>Brain Surgery</label>
+				<description>Allows you to perform surgery on the brain.</description>
+				<baseCost>15000</baseCost>
+				<techLevel>Transcendent</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<prerequisites>
+					<li>SyntheticOrgans</li>
+					<li>RIF_TranscendentConcepts</li>
+				</prerequisites>
+				<tab>TranscendentEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="SyntheticSkin"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>SyntheticSkin</defName>
+				<label>Synthetic Organs</label>
+				<description>Allows you to craft synthetic skin.</description>
+				<baseCost>15000</baseCost>
+				<techLevel>Transcendent</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<prerequisites>
+					<li>SyntheticOrgans</li>
+					<li>RIF_TranscendentConcepts</li>
+				</prerequisites>
+				<tab>TranscendentEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="NeurotrainerMaking"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>NeurotrainerMaking</defName>
+				<label>AI Device Crafting</label>
+				<description>Allows you to fabricate complicated AI devices.</description>
+				<baseCost>15000</baseCost>
+				<techLevel>Transcendent</techLevel>
+				<prerequisites>
+					<li>BrainSurgery</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>TranscendentEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="MassStorage"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>MassStorage</defName>
+				<label>Mass Storage</label>
+    			<description>Your colony is overflowing with stacks of items. There are no plausible storage solutions, and you have exhausted all paths. The only solution is to take a shot in the dark at a rumored long lost Transcendent technology said to be capable of storing millions, no, BILLIONS of items in a small space.</description>
+    			<techLevel>Transcendent</techLevel>
+    			<baseCost>15000</baseCost>
+	    		<prerequisites>
+    				<li>NeurotrainerMaking</li>
+    			</prerequisites>
+	    		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    			<requiredResearchFacilities>
+    				<li>MultiAnalyzer</li>
+	    		</requiredResearchFacilities>
+    			<tab>TranscendentEra</tab>
+    			<researchViewX>3</researchViewX>
+	    		<researchViewY>3</researchViewY>
+	    	</ResearchProjectDef>
+	    </value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="MRE_Tier4_Robotics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>MRE_Tier4_Robotics</defName>
+				<label>Robotics: Tier 4 Robots</label>
+				<description>Further research reveals construction of intelligent robots capable of many tasks that they learn through experience.</description>
+				<baseCost>15000</baseCost>
+				<techLevel>Transcendent</techLevel>
+				<prerequisites>
+					<li>MRE_Tier3_Robotics</li>
+					<li>NeurotrainerMaking</li>
+				</prerequisites>
+				<tab>TranscendentEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ArtCraftingII"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ArtCraftingII</defName>
+				<label>Autonomous Art II</label>
+				<description>Combined with overclocking, make your neural networks react much faster, improving quality of art.</description>
+				<techLevel>Transcendent</techLevel>
+				<baseCost>15000</baseCost>
+				<prerequisites>
+					<li>ArtCraftingI</li>
+					<li>AutonomousOverclockingI</li>
+					<li>NeurotrainerMaking</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>TranscendentEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>4.15</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ResearchProject_RTMagneticShield"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ResearchProject_RTMagneticShield</defName>
+				<label>Solar Flare Shielding</label>
+				<description>Allows construction of a magnetic shield to protect electric devices in the entire colony from solar flares.\n\nWhen idle, the shield requires a pittance of power to maintain it's detection circuits, ever ready to activate whenever a solar flare occurs. Should that happen, the shield will start drawing up to 25 kWt of power in order to form a semblance of localized magnetosphere, neutralizing the effect a solar flare would have on colony's electronics. Effective range of this protection is enough to cover the colony and then some.\n\nEeven reduced by the shield, excessive electromagnetic fluctuations caused by the flare will still render more sensitive devices like comms consoles inoperable.</description>
+				<baseCost>10000</baseCost>
+				<techLevel>Transcendent</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<prerequisites>
+				    <li>NeurotrainerMaking</li>
+				</prerequisites>
+				<tab>TranscendentEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>4.65</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ResearchProjectDefs>
+
+	<ResearchProjectDef>
+		<defName>RIF_TranscendentConcepts</defName>
+		<label>Transcendent Concepts</label>
+		<description>Study the absolute limits of technology and the fundamentals of artificial intelligence.</description>
+		<baseCost>15000</baseCost>
+		<techLevel>Transcendent</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>RIF_UltraConcepts</li>
+		</prerequisites>
+		<tab>TranscendentEra</tab>
+		<researchViewX>0</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+
+</ResearchProjectDefs>

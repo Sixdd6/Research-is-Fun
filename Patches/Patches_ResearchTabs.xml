@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<Operations>
+		<li Class="PatchOperationRemove">
+			<xpath>*/ResearchTabDef</xpath>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<Order>Append</Order>
+			<value>
+				<ResearchTabDef>
+					<DefName>Main</DefName>
+					<label>Neolithic Era</label>
+				</ResearchTabDef>
+	
+				<ResearchTabDef>
+					<DefName>MedievalEra</DefName>
+					<label>Medieval Era</label>
+				</ResearchTabDef>
+	
+				<ResearchTabDef>
+					<DefName>EarlyTechEra</DefName>
+					<label>Industrial Era</label>
+				</ResearchTabDef>
+	
+ 				<ResearchTabDef>
+					<DefName>StatUpgrades</DefName>
+					<label>Stat Upgrades</label>
+				</ResearchTabDef>
+	
+				<ResearchTabDef>
+					<DefName>MiddleTechEra</DefName>
+					<label>Electrical Era</label>
+				</ResearchTabDef>
+	
+				<ResearchTabDef>
+					<DefName>TurretTechEra</DefName>
+					<label>Turret Tech</label>
+				</ResearchTabDef>
+	
+				<ResearchTabDef>
+					<DefName>LateTechEra</DefName>
+					<label>Computer Era</label>
+				</ResearchTabDef>
+	
+				<ResearchTabDef>
+					<DefName>SpacerEra</DefName>
+					<label>Spacer Era</label>
+				</ResearchTabDef>
+	
+				<ResearchTabDef>
+					<DefName>UltraEra</DefName>
+					<label>High Tech</label>
+				</ResearchTabDef>
+	
+				<ResearchTabDef>
+					<DefName>TranscendentEra</DefName>
+					<label>Future Tech</label>
+				</ResearchTabDef>
+			</value>
+		</li>
+		</Operations>
+	</Operation>
+
+</Patch>

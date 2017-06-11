@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ResearchProjectDefs>
+
+	<ResearchProjectDef>
+		<defName>RIF_Research_WindPower</defName>
+		<label>Wind Turbine</label>
+		<description>Harness wind power for electrical generation.</description>
+		<baseCost>1500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>Electricity</li>
+		</prerequisites>
+		<tab>MiddleTechEra</tab>
+		<researchViewX>1</researchViewX>
+		<researchViewY>2.5</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>CookingII</defName>
+		<label>Advanced Cooking</label>
+		<description>Researches advanced cooking machines. \nUnlocks the Electric Cooking Stove and Sweets Table, for making Milk based treats and candies.</description>
+		<baseCost>1500</baseCost>
+		    <techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>Electricity</li>
+			<li>CookingI</li>
+		</prerequisites>
+		<tab>MiddleTechEra</tab>
+		<researchViewX>1</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>LuxuryWood</defName>
+		<label>Luxury Wood</label>
+		<description>Allows colonists to plant Ebony, Amaranth and Quebracho trees.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<prerequisites>
+			<li>AdvancedHydroponics</li>
+		</prerequisites>
+		<tab>MiddleTechEra</tab>
+		<researchViewX>3</researchViewX>
+		<researchViewY>6.65</researchViewY>
+	</ResearchProjectDef>
+
+</ResearchProjectDefs>

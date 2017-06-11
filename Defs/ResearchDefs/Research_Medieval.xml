@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResearchProjectDefs>
+
+	<ResearchProjectDef>
+		<defName>RIF_Research_MedievalTech</defName>
+		<label>Medieval Technology</label>
+		<description>Your people are advancing, you are now capable of medieval levels of technology.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Medieval</techLevel>
+		<tags>
+			<li>ClassicStart</li>
+			<li>MedievalStart</li>
+		</tags>
+		<prerequisites>
+			<li>RIF_Research_TribalTech</li>
+		</prerequisites>
+		<tab>MedievalEra</tab>
+		<researchViewX>0</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+
+</ResearchProjectDefs>

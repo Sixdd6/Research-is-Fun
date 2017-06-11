@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- 	<Operation Class="PatchOperationInsert">
+		<xpath>*/ThingDef[defName="BrewingSpot"]/defName</xpath>
+		<value>
+			<researchPrerequisites>
+				<li>Brewing</li>
+			</researchPrerequisites>
+		</value>
+	</Operation> -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[DefName="Brewery"]/researchPrerequisites</xpath>
+		<value>
+			<researchPrerequisites>
+				<li>RIF_Research_MedievalTech</li>
+				<li>Brewing</li>
+			</researchPrerequisites>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/ThingDef[DefName="TableSculpting"]/DefName</xpath>
+		<value>
+			<researchPrerequisites>
+				<li>RIF_Research_MedievalTech</li>
+			</researchPrerequisites>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/ThingDef[defName="Anvil"]/defName</xpath>
+		<value>
+			<researchPrerequisites>
+				<li>RIF_Research_MedievalTech</li>
+			</researchPrerequisites>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/ThingDef[DefName="TableButcher"]/DefName</xpath>
+		<value>
+			<researchPrerequisites><li>RIF_Research_MedievalTech</li></researchPrerequisites>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/ThingDef[defName="FueledStove"]/defName</xpath>
+		<value>
+			<researchPrerequisites><li>CookingI</li></researchPrerequisites>
+		</value>
+	</Operation>
+
+<!-- 	<Operation Class="PatchOperationInsert">
+		<xpath>*/ThingDef[DefName="TableStonecutter"]/DefName</xpath>
+		<value>
+			<researchPrerequisites><li>Stonecutting</li></researchPrerequisites>
+		</value>
+	</Operation> -->
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/ThingDef[defName="StoneChippingSpot"]/defName</xpath>
+		<value>
+			<researchPrerequisites><li>RIF_TribalStonecutting</li></researchPrerequisites>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/ThingDef[defName="Forge"]/defName</xpath>
+		<value>
+			<researchPrerequisites><li>Smithing</li></researchPrerequisites>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/ThingDef[defName="SimpleResearchBench"]/defName</xpath>
+		<value>
+			<researchPrerequisites><li>RIF_Research_MedievalTech</li></researchPrerequisites>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/ThingDef[DefName="Oven"]/DefName</xpath>
+		<value>
+			<researchPrerequisites><li>RIF_Research_MedievalTech</li></researchPrerequisites>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/ThingDef[DefName="HandCanningstove"]/DefName</xpath>
+		<value>
+			<researchPrerequisites><li>RIF_Research_MedievalTech</li></researchPrerequisites>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/ThingDef[defName="GrindStone"]/defName</xpath>
+		<value>
+			<researchPrerequisites><li>RIF_Research_MedievalTech</li></researchPrerequisites>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[DefName="NeurotrainerWorkTable"]/researchPrerequisites</xpath>
+		<value>
+			<researchPrerequisites><li>NeurotrainerMaking</li></researchPrerequisites>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[DefName="NeurotrainerWorkTable"]/DesignationCategory</xpath>
+		<value>
+			<DesignationCategory>Production2</DesignationCategory>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/ThingDef[DefName="TableBasicProsthetic"]/DefName</xpath>
+		<value>
+			<researchPrerequisites><li>BasicProsthetics</li></researchPrerequisites>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/ThingDef[DefName="FM_BasicManagerStation"]/DefName</xpath>
+		<value>
+			<researchPrerequisites><li>RIF_Research_IndustrialTech</li></researchPrerequisites>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<Operations>
+			<li Class="PatchOperationTest">
+				<xpath>*/ThingDef[defName="RBB_Bridge"]</xpath>
+    		</li>
+			<li Class="PatchOperationInsert">
+				<xpath>*/ThingDef[defName="RBB_Bridge"]/defName</xpath>
+					<value>
+						<stuffCategories>
+							<li>Woody</li>
+						</stuffCategories>
+					</value>
+			</li>
+			<li Class="PatchOperationInsert">
+				<xpath>*/ThingDef[defName="RBB_Bridge"]/defName</xpath>
+					<value>
+						<costStuffCount>10</costStuffCount>
+					</value>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>*/ThingDef[defName="RBB_Bridge"]/costList</xpath>
+			</li>
+			<li Class="PatchOperationInsert">
+				<xpath>*/ThingDef[defName="RBB_DeepBridge"]/defName</xpath>
+					<value>
+						<stuffCategories>
+							<li>Woody</li>
+						</stuffCategories>
+					</value>
+			</li>
+			<li Class="PatchOperationInsert">
+				<xpath>*/ThingDef[defName="RBB_DeepBridge"]/defName</xpath>
+					<value>
+						<costStuffCount>20</costStuffCount>
+					</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="RBB_DeepBridge"]/costList</xpath>
+					<value>
+						<costList>
+							<Steel>1</Steel>
+						</costList>
+					</value>
+			</li>
+			<li Class="PatchOperationInsert">
+				<xpath>*/ThingDef[defName="RBB_Boardwalk"]/defName</xpath>
+					<value>
+						<stuffCategories>
+							<li>Woody</li>
+						</stuffCategories>
+					</value>
+			</li>
+			<li Class="PatchOperationInsert">
+				<xpath>*/ThingDef[defName="RBB_Boardwalk"]/defName</xpath>
+					<value>
+						<costStuffCount>5</costStuffCount>
+					</value>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>*/ThingDef[defName="RBB_Boardwalk"]/costList</xpath>
+			</li>
+		</Operations>
+	</Operation>
+
+</Patch>

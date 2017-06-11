@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="SelfLoading"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>SelfLoading</defName>
+				<label>Self-Loading Actions</label>
+				<description>Learn how to create complex self-loading guns.</description>
+				<baseCost>2500</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>Machining</li>
+					<li>Electricity</li>
+				</prerequisites>
+				<tab>TurretTechEra</tab>
+				<researchViewX>0</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="MultibarrelWeapons"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>MultibarrelWeapons</defName>
+				<label>Multi-Barrel Weapons</label>
+				<description>Allows you to build miniguns.</description>
+				<baseCost>3000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>SelfLoading</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+				<tab>TurretTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="GunTurrets"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>GunTurrets</defName>
+				<label>Gun Turrets</label>
+				<description>Allows the production of automated gun turrets.</description>
+				<baseCost>2000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>SelfLoading</li>
+				</prerequisites>
+				<tab>TurretTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="GunComplex"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>GunComplex</defName>
+				<label>Gun Complex</label>
+				<description>Allows the production of the new manned gun complex for your colony defense.\n\nRequires a pawn to control the turret. Does not need power.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>GunTurrets</li>
+				</prerequisites>
+				<tags>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>TurretTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="RocketComplex"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>RocketComplex</defName>
+				<label>Rocket Complex</label>
+				<description>Allows the production of the manned rocket complex for your colony defense.\n\nRequires a pawn to control the turret. Does not need power.</description>
+				<baseCost>2000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>GunComplex</li>
+					<li>Mortars</li>
+				</prerequisites>
+				<tab>TurretTechEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>2.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="MilitaryTurret"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>MilitaryTurret</defName>
+				<label>Military Grade Turrets</label>
+				<description>Allows the production of more advanced military grade turrets.</description>
+				<baseCost>2000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>GunComplex</li>
+				</prerequisites>
+				<tab>TurretTechEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ShredderTurret"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ShredderTurret</defName>
+				<label>Shredder Turrets</label>
+				<description>Allows the production of deadly close range Shredders turrets.</description>
+				<baseCost>3000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>MilitaryTurret</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<tab>TurretTechEra</tab>
+				<researchViewX>4</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="PrecisionTurret"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>PrecisionTurret</defName>
+				<label>Precision Turrets</label>
+				<description>Allows the production of long range Precision turrets.</description>
+				<baseCost>4000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>ShredderTurret</li>
+					<li>ChargedShot</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<tab>TurretTechEra</tab>
+				<researchViewX>5</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="BlastTurret"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>BlastTurret</defName>
+				<label>Blast Turrets</label>
+				<description>Allows the production of quite fearful Blast turrets.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>PrecisionTurret</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<tab>TurretTechEra</tab>
+				<researchViewX>6</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="VulcanCannon"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>VulcanCannon</defName>
+				<label>Vulcan Cannon</label>
+				<description>Allows the production of Vulcan cannons.</description>
+				<baseCost>6000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>BlastTurret</li>
+					<li>MultibarrelWeapons</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+				<tab>TurretTechEra</tab>
+				<researchViewX>7</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+</Patch>

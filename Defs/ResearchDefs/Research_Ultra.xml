@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ResearchProjectDefs>
+
+	<ResearchProjectDef>
+		<defName>RIF_UltraConcepts</defName>
+		<label>High-tech Concepts</label>
+		<description>Study the boundaries of current technology and concepts.</description>
+		<baseCost>10000</baseCost>
+		<techLevel>Ultra</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>SpacerTech</li>
+		</prerequisites>
+		<tab>UltraEra</tab>
+		<researchViewX>0</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+
+</ResearchProjectDefs>

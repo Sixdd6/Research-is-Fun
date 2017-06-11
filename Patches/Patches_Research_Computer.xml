@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="MicroelectronicsBasics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>MicroelectronicsBasics</defName>
+				<label>Microelectronics Basics</label>
+				<description>The basics of working with delicate, complex electronics. This unlocks the high-tech research bench, comms console, and other research projects like tube televisions, and cryptosleep caskets.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Electricity</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+				<researchViewX>0</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="AJO_ArcadeConstruction"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>AJO_ArcadeConstruction</defName>
+				<label>Arcade construction</label>
+				<description>Allows colonists to copy game cartridges and assemble arcades.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>MicroelectronicsBasics</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>0.35</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ManagingSoftware"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ManagingSoftware</defName>
+				<label>Basic Managing Software</label>
+				<description>Develop basic software for colony management.\n\nAllows building manager desks with a computer, pre-installed with a host of guaranteed bug free(tm) managing software.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<prerequisites>
+					<li>MicroelectronicsBasics</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>0.85</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="TubeTelevision"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>TubeTelevision</defName>
+				<label>Tube Television</label>
+				<description>Allows the production of tube televisions.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>MicroelectronicsBasics</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>1.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Firefoam"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Firefoam</defName>
+				<label>Firefoam</label>
+				<description>Allows the construction of firefoam poppers; fire-safety buildings which spread fire-retardant foam in response to encroaching flames.</description>
+				<baseCost>2000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>MicroelectronicsBasics</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<researchViewX>1</researchViewX>
+				<researchViewY>2</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="SimpleProsthetics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>SimpleProsthetics</defName>
+				<label>Simple Prosthetics</label>
+				<description>Advanced anatomy studies and metal testing will allow you to build simple prostheses.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>MicroelectronicsBasics</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>2.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ToxAwayProduction"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ToxAwayProduction</defName>
+				<label>ToxAway production</label>
+				<description>Learn to produce ToxAway, a pill used to inject mechanites, which help to deal with toxic fallout.</description>
+				<BaseCost>2000</BaseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Machining</li>
+					<li>MicroelectronicsBasics</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="HospitalBed"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>HospitalBed</defName>
+				<label>Hospital Bed</label>
+				<description>Allows colonists to construct hospital beds which increase chance of successful medical work.</description>
+				<baseCost>2000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>MicroelectronicsBasics</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<researchViewX>1</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="GeothermalPower"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>GeothermalPower</defName>
+				<label>Geothermal Power</label>
+				<description>Allows you to build geothermal power plants on top of steam geysers, for uninterrupted power.</description>
+				<baseCost>2000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>MicroelectronicsBasics</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<researchViewX>1</researchViewX>
+				<researchViewY>4</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="TransportPod"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>TransportPod</defName>
+				<label>Transport Pod</label>
+				<description>Construct launchable transport pods that you can use to launch people and supplies long distances across the planet's surface.</description>
+				<baseCost>2000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>MicroelectronicsBasics</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<researchViewX>1</researchViewX>
+				<researchViewY>4.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="MedicineProduction"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>MedicineProduction</defName>
+				<label>Medicine Production</label>
+				<description>Produce medicine from healroot medicine, neutroamine, and cloth.</description>
+				<baseCost>2000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>DrugProduction</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<researchViewX>0</researchViewX>
+				<researchViewY>5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="BulkMedicine"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>BulkMedicine</defName>
+				<label>Bulk Medicine</label>
+				<description>Allows you to craft larger numbers or medicines. Effects Neutroamine, FluEz, Ibuprofen, Antibiotics, Healroot Medicine Kits, and Medicine Kits.</description>
+				<baseCost>2000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>MedicineProduction</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="MultiAnalyzer"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>MultiAnalyzer</defName>
+				<label>Multi-Analyzer</label>
+				<description>Allows colonists to build multi-analyzers which increase research speed, and allow higher-level research projects, if placed near a research bench.</description>
+				<baseCost>2500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>MicroelectronicsBasics</li>
+					<li>FluffyBreakdowns_ComponentLifetimeOne</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<tab>LateTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>5.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="MRE_Entry_Robotics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>MRE_Entry_Robotics</defName>
+				<label>Robotics: Concepts</label>
+				<description>Research into the basic ideas and concepts of robotics.</description>
+				<baseCost>2500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<prerequisites>
+					<li>ManagingSoftware</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>0.85</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="MRE_Tier1_Robotics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>MRE_Tier1_Robotics</defName>
+				<label>Robotics: Tier 1 Robots</label>
+				<description>Further research reveals construction of cleaning and hauling robots.</description>
+				<baseCost>2500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<prerequisites>
+					<li>MRE_Entry_Robotics</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>0.85</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="VeryLargeBatteries"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>VeryLargeBatteries</defName>
+				<label>Very Large Batteries</label>
+				<description>Learn alternate methods of power storage, and create compact 64k and 256k battery cells for mass storage of power.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>LargeBatteries</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>6</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="DeepDrilling"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>DeepDrilling</defName>
+				<label>Deep Drilling</label>
+				<description>Allows you to build deep drills for extracting resources from deep underground. You'll need a ground-penetrating scanner to find the resources.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>MultiAnalyzer</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+				<tab>LateTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>5.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="GroundPenetratingScanner"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>GroundPenetratingScanner</defName>
+				<label>Deep Scanner</label>
+				<description>Allows you to build ground-penetrating scanners that can detect drillable resources deep under the surface.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>DeepDrilling</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>LateTechEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>5.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="AutonomousCookingI"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>AutonomousCookingI</defName>
+				<label>Autonomous Cooking</label>
+				<description>Learn how to give auto-assemblers enough dexterity and precision for them to become cooks.</description>
+				<techLevel>Industrial</techLevel>
+				<baseCost>2500</baseCost>
+				<prerequisites>
+					<li>SALSpecialisation</li>
+					<li>MicroelectronicsBasics</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>LateTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>6.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Electricity"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Electricity</defName>
+				<label>Electricity</label>
+				<description>Generate and use electricity for cooking and other simple tasks.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<tags>
+					<li>ClassicStart</li>
+				</tags>
+				<prerequisites>
+					<li>RIF_Research_IndustrialTech</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>0</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="SolarPanels"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>SolarPanels</defName>
+				<label>Solar Panels</label>
+				<description>Build solar panels for electrical generation.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Electricity</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>2</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Batteries"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Batteries</defName>
+				<label>Batteries</label>
+				<description>Build batteries for storing electricity.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Electricity</li>
+				</prerequisites>
+				<tags>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="LargeBatteries"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>LargeBatteries</defName>
+				<label>Large Batteries</label>
+				<description>Build large batteries for efficient storage of electricity. Unlocks the 4k and 16k battery cell.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Batteries</li>
+					<li>FluffyBreakdowns_ComponentLifetimeOne</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ResearchProject_RTBasicFuses"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ResearchProject_RTBasicFuses</defName>
+				<label>Basic Fuses</label>
+				<description>Allows building makeshift fuses; can be placed anywhere on a power network with batteries. Each one is enough to safely dissipate up to 3000 Wd (three standard batteries) discharge, but will require repairs if tripped.</description>
+    			<baseCost>1000</baseCost>
+	    		<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Batteries</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ResearchProject_RTCircuitBreakers"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ResearchProject_RTCircuitBreakers</defName>
+				<label>Circuit Breakers</label>
+				<description>Allows building circuit breakers; can be placed anywhere on a power network with batteries. Each one is enough to safely dissipate up to 3000 Wd (three standard batteries) discharge, and will need to be manually reset if tripped.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>ResearchProject_RTBasicFuses</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="PoweredPlumbing"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>PoweredPlumbing</defName>
+				<label>Powered Plumbing</label>
+				<description>Build powered sewage treatment, immersion and solar heaters.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Plumbing</li>
+					<li>Electricity</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Refining"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Refining</defName>
+				<label>Refining</label>
+				<description>Build refineries to make chemfuel from wood.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Electricity</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>4.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="NutrientPaste"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>NutrientPaste</defName>
+				<label>Nutrient Paste</label>
+				<description>Build nutrient paste dispensers which efficiently produce edible meals from raw nutritive feedstocks.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>CookingII</li>
+				</prerequisites>
+				<tags>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>4</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Autodoors"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Autodoors</defName>
+				<label>Autodoors</label>
+				<description>Build autodoors which open to permit movement without slowing anyone down.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Electricity</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>0</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Hydroponics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Hydroponics</defName>
+				<label>Hydroponics</label>
+				<description>Allows you to build hydroponics basins to rapidly grow crops indoors regardless of the terrain or weather outside.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Electricity</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>6</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="AdvancedHydroponics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>AdvancedHydroponics</defName>
+				<label>Adv Hydroponics</label>
+    			<description>Allows you to build advanced hydroponics tables to rapidly grow crops indoors regardless of the terrain or weather outside. Tables cost more to make, require power, and provide light. And crops grow at a faster rate.</description>
+    			<baseCost>2000</baseCost>
+	    		<techLevel>Industrial</techLevel>
+    			<prerequisites>
+    				<li>Hydroponics</li>
+	    		</prerequisites>
+    			<tab>MiddleTechEra</tab>
+    			<researchViewX>2</researchViewX>
+				<researchViewY>6.15</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="HeatedSunlamps"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>HeatedSunlamps</defName>
+				<label>Heated Sunlamps</label>
+    			<description>Allows you to build advanced sun lamps that provide light and act as a heater to grow crops.</description>
+    			<baseCost>1500</baseCost>
+	    		<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>AdvancedHydroponics</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>6.15</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ElectricSmelting"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ElectricSmelting</defName>
+				<label>Electric Smelting</label>
+				<description>Build electric smithy and smelters.\n\nThe electric smithy allows smithing items without fuel. The electric smelters uses heat and strong electromagnets to extract useful metal from slag chunks and other items.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Electricity</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>5.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="CAL_UtilityAlloys"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>CAL_UtilityAlloys</defName>
+				<label>Utility Alloys</label>
+				<description>Research alloying metals for utility purposes. \n  -Unlocks Plumchalcum, Duralumin, Bronze, and Hepatzion.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Medieval</techLevel>
+				<prerequisites>
+					<li>ElectricSmelting</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>5.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="CAL_DecorativeAlloys"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>CAL_DecorativeAlloys</defName>
+				<label>Decorative Alloys</label>
+				<description>Research alloying metals for decorative purposes. \n  -Unlocks Brass, Aurichalcum, Sterling Silver, Rose Gold, and Electrum.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>ElectricSmelting</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>4</researchViewX>
+				<researchViewY>6</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="CAL_AdvancedAlloys"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>CAL_AdvancedAlloys</defName>
+				<label>Advanced Alloys</label>
+				<description>Research more advanced alloys. \n  -Unlocks Black Steel and Plastin.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>CAL_UtilityAlloys</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<researchViewX>4</researchViewX>
+				<researchViewY>5.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="FluffyBreakdowns_ComponentLifetimeOne"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>FluffyBreakdowns_ComponentLifetimeOne</defName>
+				<label>Hardened Components</label>
+				<description>By using high-grade heat treated steel for components, we can dramatically increase their durability.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>ElectricSmelting</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<researchViewX>2</researchViewX>
+				<researchViewY>4.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="resourceleafs"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>resourceleafs</defName>
+				<label>Resource Plants</label>
+				<description>Researches plants that absorb minerals from the ground. The resource can be extracted in a forge.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>ElectricSmelting</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>5.15</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ElectricCremation"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ElectricCremation</defName>
+				<label>Electric Cremation</label>
+				<description>Build crematoriums which can vaporize unwanted corpses.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>ElectricSmelting</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>5.65</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ColoredLights"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ColoredLights</defName>
+				<label>Colored Lights</label>
+				<description>Allows colonists to construct colored lights for decorative purposes.</description>
+				<baseCost>500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Electricity</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>0.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="AirConditioning"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>AirConditioning</defName>
+				<label>Air Conditioning</label>
+				<description>Build air conditions to cool rooms in the heat, or to keep freezers.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Electricity</li>
+				</prerequisites>
+				<tags>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>1</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="QC_Research_QuantumCooler_I"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>QC_Research_QuantumCooler_I</defName>
+				<label>Quantum Prototype</label>
+				<description>Required to unlock the Prototype Quantum Cooler. Could it really be possible?</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<prerequisites>
+					<li>AirConditioning</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>0</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Machining"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Machining</defName>
+				<label>Machining</label>
+				<description>Build machining tables to craft guns and machinery or disassemble dead mechanoids.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Electricity</li>
+					<li>Smithing</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>1.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="SmokepopBelt"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>SmokepopBelt</defName>
+				<label>Smokepop Belts</label>
+				<description>Learn to build smokepop belts which can provide an automatic defensive smokescreen.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Machining</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>1</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="IndustrialDrill"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>IndustrialDrill</defName>
+				<label>Industrial Applications</label>
+				<description>Allows colonists to build heavy industrial machines such as the Drill Rig.</description>
+				<baseCost>3000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<prerequisites>
+					<li>Machining</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>0.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="MoisturePump"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>MoisturePump</defName>
+				<label>Moisture Pump</label>
+				<description>Allows the construction of moisture pumps, which turn wet ground dry.</description>
+				<baseCost>2000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>IndustrialDrill</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<researchViewX>3</researchViewX>
+				<researchViewY>0.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Mortars"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Mortars</defName>
+				<label>Mortars</label>
+				<description>Learn to build mortars which can lob shells long distances over walls.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Machining</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>1.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="IEDBomb"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>IEDBomb</defName>
+				<label>Explosive IEDs</label>
+				<description>Allows colonists to build improvised explosive device-based traps from mortar shells.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Mortars</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>1</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="IEDIncendiary"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>IEDIncendiary</defName>
+				<label>Incendiary IEDs</label>
+				<description>Allows colonists to build incendiary explosive traps from mortar shells.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>IEDBomb</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>4</researchViewX>
+				<researchViewY>1</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Repeaters"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Repeaters</defName>
+				<label>Repeating Actions</label>
+				<description>Build more advanced, repeating firearms.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Machining</li>
+					<li>Gunpowder</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>2</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="AdvGrenades"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>AdvGrenades</defName>
+				<label>Advanced Grenades</label>
+				<description>Build more complex and varied grenades.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Gunpowder</li>
+					<li>Machining</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>2.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Optics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Optics</defName>
+				<label>Optics</label>
+				<description>Grants the ability to craft magnified optics for rifles.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Repeaters</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>2</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="GrenadeLaunchers"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>GrenadeLaunchers</defName>
+				<label>Grenade Launchers</label>
+				<description>Construct glorified metal tubes to fire large explosives from.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>AdvGrenades</li>
+					<li>Repeaters</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>2.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="AutomationBasics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>AutomationBasics</defName>
+				<label>Automation Basics</label>
+				<description>Learn the very basics of automation and mechanisms, the gateway to an industrial colony.</description>
+				<techLevel>Industrial</techLevel>
+				<baseCost>2000</baseCost>
+				<prerequisites>
+					<li>Machining</li>
+					<li>FluffyBreakdowns_ComponentLifetimeOne</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>4.5</researchViewY>
+		    </ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="AutonomousCraftingI"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>AutonomousCraftingI</defName>
+				<label>Autonomous Crafting I</label>
+				<techLevel>Industrial</techLevel>
+				<baseCost>2000</baseCost>
+				<description>Start to learn how to program machines to be able to perform skilled labor.</description>
+				<prerequisites>
+					<li>AutomationBasics</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>4</researchViewX>
+				<researchViewY>4.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="AutonomousCraftingII"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>AutonomousCraftingII</defName>
+				<label>Autonomous Crafting II</label>
+				<techLevel>Industrial</techLevel>
+				<baseCost>2000</baseCost>
+				<description>Start to learn how to program more advanced machines to be able to craft faster, better, and more accurately.</description>
+				<prerequisites>
+					<li>AutonomousCraftingI</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>5</researchViewX>
+				<researchViewY>4.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="SALSpecialisation"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>SALSpecialisation</defName>
+				<label>Autonomous Specialization</label>
+				<techLevel>Industrial</techLevel>
+				<baseCost>2000</baseCost>
+				<description>Start to learn how to specialize and create different auto-assemblers with different roles.</description>
+				<prerequisites>
+					<li>AutonomousCraftingII</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>6</researchViewX>
+				<researchViewY>4.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+</Patch>

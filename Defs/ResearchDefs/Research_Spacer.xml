@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ResearchProjectDefs>
+
+	<ResearchProjectDef>
+		<defName>RIF_SpacerTech</defName>
+		<label>Spacer Technology</label>
+		<description>Study the ideas and concepts of space travel.</description>
+		<baseCost>7000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites></prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<tab>SpacerEra</tab>
+		<researchViewX>0</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+  
+</ResearchProjectDefs>

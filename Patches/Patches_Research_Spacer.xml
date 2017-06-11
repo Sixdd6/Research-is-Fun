@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="AdvancedManagingSoftware"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>AdvancedManagingSoftware</defName>
+				<label>Advanced Managing Software</label>
+				<description>Develop advanced software for colony management.\n\nAdvancements in AI and colony-aware computers allow the building of Colony Aware Supercomputers, preinstalled with FluffyOS. Some colonists have reported doors opening and closing, airconditioning systems going haywire, and electric smelters suddenly turning on. Nevertheless, the manufacturer guarantees(tm) that FluffyOS is not programmed to kill colonists.</description>
+				<baseCost>7000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<prerequisites>
+					<li>ManagingSoftware</li>
+					<li>RIF_SpacerTech</li>
+				</prerequisites>
+				<tab>SpacerEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>4</researchViewY>
+			</ResearchProjectDef>
+	    </value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="PowerManagement"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>PowerManagement</defName>
+				<label>Power Management</label>
+				<description>Create management software to monitor the colony's power usage.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<prerequisites>
+					<li>AdvancedManagingSoftware</li>
+				</prerequisites>
+				<researchMods>
+					<li Class="FluffyManager.UnlockPowerTab" />
+				</researchMods>
+				<tab>SpacerEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>4.15</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="sd_adv_powergen_research_adv_solar"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>sd_adv_powergen_research_adv_solar</defName>
+				<label>Adv. Solar Power</label>
+				<description>Allows colonists to build advanced solar panels.</description>
+				<baseCost>7000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>SolarPanels</li>
+					<li>RIF_SpacerTech</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>2</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="sd_adv_powergen_research_adv_wind_turbine"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>sd_adv_powergen_research_adv_wind_turbine</defName>
+				<label>Adv. Wind Turbine</label>
+				<description>Allows colonists to build advanced wind turbines.</description>
+				<baseCost>7000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>RIF_Research_WindPower</li>
+					<li>RIF_SpacerTech</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>2.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Synthwood"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Synthwood</defName>
+				<label>Synthwood</label>
+				<description>Allows colonists to plant Synthwood trees, a genetically engineered tree that grows quickly and produces average quality lumber.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<prerequisites>
+					<li>LuxuryWood</li>
+					<li>RIF_SpacerTech</li>
+				</prerequisites>
+				<tab>SpacerEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="LongRangeMineralScanner"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>LongRangeMineralScanner</defName>
+				<label>Long-range Mineral Scanner</label>
+				<description>Allows the construction of long-range mineral scanners which automatically detect precious minerals like gold or jade in the nearby areas (but not in which the scanners were built).\n\nThe lumps are found on average once per 30 days within a radius of 30 tiles.\n\nBuilding more than one scanner in the same or nearby areas has little to no effect.</description>
+				<baseCost>8000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>RIF_SpacerTech</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>0.35</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="DevastatorMortar"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>DevastatorMortar</defName>
+				<label>Devastator Mortar</label>
+				<description>Allows the production of Devastator mortars.</description>
+				<baseCost>8000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>Mortars</li>
+					<li>VulcanCannon</li>
+					<li>RIF_SpacerTech</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>1</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="FutureFlooring"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>FutureFlooring</defName>
+				<label>Reactive Flooring</label>
+				<description>Integration of sensors, components, and networking concepts allowing for the construction of "smart" flooring.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>Machining</li>
+					<li>RIF_SpacerTech</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>1.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Bionics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Bionics</defName>
+				<label>Bionics</label>
+				<description>Advanced study of biomimetics and engineering. Unlocks bionic parts.</description>
+				<baseCost>7000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<prerequisites>
+					<li>SimpleProsthetics</li>
+				</prerequisites>
+				<tab>SpacerEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="RibReplacements"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>RibReplacements</defName>
+				<label>Rib Replacements</label>
+				<description>Discovering the concept of very small servos, you think about putting them in ribs. You can now craft and install rib implants.</description>
+				<baseCost>7000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<prerequisites>
+					<li>Bionics</li>
+				</prerequisites>
+				<tab>SpacerEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="SurrogateOrgans"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>SurrogateOrgans</defName>
+				<label>Tissue Printer</label>
+				<description>Gaining higher medical and technical knowledge, creating a 3D printer to craft simple surrogate organs becomes possible.</description>
+				<baseCost>7000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<prerequisites>
+					<li>Bionics</li>
+				</prerequisites>
+				<tab>SpacerEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Cryptosleep"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Cryptosleep</defName>
+				<label>Cryptosleep Casket</label>
+				<description>Allows colonists to construct cryptosleep caskets, which can put living beings in a state of suspended animation.</description>
+				<baseCost>7000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>MultiAnalyzer</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>1.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ShipBasics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ShipBasics</defName>
+				<label>Shipbuilding Basics</label>
+				<description>Allows you to start researching more advanced shipbuilding technologies and eventually build a ship to escape the planet.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>MultiAnalyzer</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>1</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ShipCryptosleep"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ShipCryptosleep</defName>
+				<label>Ship Cryptosleep Caskets</label>
+				<description>Allows you to construct ship cryptosleep caskets for transporting cryptosleeping colonists between the stars.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>ShipBasics</li>
+					<li>Cryptosleep</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>4</researchViewX>
+				<researchViewY>1.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ShipReactor"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ShipReactor</defName>
+				<label>Ship Antimatter Reactor</label>
+				<description>Allows you to use an antimatter containment core to build a reactor to power a ship.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>ShipBasics</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>4</researchViewX>
+				<researchViewY>2.15</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ShipEngine"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ShipEngine</defName>
+				<label>Ship Antimatter Propulsion</label>
+				<description>Allows you to construct an engine for a ship.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>ShipBasics</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>4</researchViewX>
+				<researchViewY>2.8</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ShipComputerCore"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ShipComputerCore</defName>
+				<label>Ship Computer Core</label>
+				<description>Allows coercing an existing AI persona into a usable AI computer core for ship guidance.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>ShipBasics</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>4</researchViewX>
+				<researchViewY>1</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="FluffyBreakdowns_ComponentLifetimeTwo"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>FluffyBreakdowns_ComponentLifetimeTwo</defName>
+				<label>Nano-Infused Components</label>
+				<description>By using composite materials infused with self-repairing nanobots, we can further increase component lifespans.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>FluffyBreakdowns_ComponentLifetimeOne</li>
+					<li>RIF_SpacerTech</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>5.15</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="PoweredArmor"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>PoweredArmor</defName>
+				<label>Powered Armor</label>
+				<description>Neuro-memetic robotics and advanced plasteel weaving technologies allow you to build the power armor and power armor helmets.</description>
+				<baseCost>7000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>FluffyBreakdowns_ComponentLifetimeTwo</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>5.45</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="VitalsMonitor"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>VitalsMonitor</defName>
+				<label>Vitals Monitor</label>
+				<description>Allows colonists to build vitals monitors which increase patients treatment quality if placed next to medical beds.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>HospitalBed</li>
+					<li>RIF_SpacerTech</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>5.8</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="NeuralImplants"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>NeuralImplants</defName>
+				<label>Nerve Staples</label>
+				<description>Allows the production nerve staples from plasteel microcomponents.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>VitalsMonitor</li>
+					<li>MedicineProduction</li>
+					<li>EnergizedComponents</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>5.8</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ComponentAssembly"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ComponentAssembly</defName>
+				<label>Component Assembly</label>
+				<description>Allows you to build the Component Assembly Bench, where colonists can make components from simple materials.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>RIF_SpacerTech</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>4.65</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="EnergizedComponents"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>EnergizedComponents</defName>
+				<label>Energized Components</label>
+				<description>You can now energize components at a component assembly bench, which could power more complex prostheses.</description>
+				<baseCost>7000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<prerequisites>
+					<li>ComponentAssembly</li>
+				</prerequisites>
+				<tab>SpacerEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>4.65</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="MRE_Tier2_Robotics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>MRE_Tier2_Robotics</defName>
+				<label>Robotics: Tier 2 Robots</label>
+				<description>Power management improvements have revealed further research into construction of farming, cooking and mining robots.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>MRE_Tier1_Robotics</li>
+					<li>PowerManagement</li>
+				</prerequisites>
+				<tab>SpacerEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>4</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ChargedShot"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ChargedShot</defName>
+				<label>Charged Shot</label>
+				<description>Understand the secrets of pulse-charged energy projectile munitions. Allows you to build the charge rifle.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>EnergizedComponents</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>4.65</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ArtCraftingI"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ArtCraftingI</defName>
+				<label>Autonomous Art I</label>
+				<description>Learn the ways of hypercomputing and neural networks, allowing machines to create proper semi-decent art.</description>
+				<techLevel>Spacer</techLevel>
+				<baseCost>7000</baseCost>
+				<prerequisites>
+					<li>SALSpecialisation</li>
+					<li>MRE_Tier2_Robotics</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>SpacerEra</tab>
+				<researchViewX>4</researchViewX>
+				<researchViewY>4</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="AJO_TemperaPainting"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>AJO_TemperaPainting</defName>
+				<label>Tempera paint</label>
+				<description>Allows more efficient paint making by binding spectago pigment with eggs.</description>
+				<baseCost>500</baseCost>
+				<techLevel>Medieval</techLevel>
+				<prerequisites>
+					<li>RIF_Research_MedievalTech</li>
+				</prerequisites>
+				<tab>MedievalEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>1</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="agricultureIII"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>agricultureIII</defName>
+				<label>Agriculture III</label>
+				<description>Researches plant genetics to unlock exciting new types of plants to grow! \n\n Unlocks fruit trees. Fruit trees have a longer grow time but a higher yield. \n\n Unlocks Apple, Banana, Cherry, Olive, Orange, Peach, Date, and Fig trees.</description>
+				<baseCost>500</baseCost>
+				<techLevel>Medieval</techLevel>
+				<prerequisites>
+					<li>RIF_Research_MedievalTech</li>
+					<li>agricultureII</li>
+				</prerequisites>
+				<tags>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>MedievalEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>1.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="SoilReclam"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>SoilReclam</defName>
+				<label>Soil Reclamation I</label>
+				<description>Researches methods of making farmable soil. \n\nUnlocks placing soil on smoothed stone and other finished flooring. \n\nUnlocks Floor menus Place Soil and Garden Soil.</description>
+				<prerequisites>
+					<li>agricultureIII</li>
+				</prerequisites>
+				<tags>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>MedievalEra</tab>
+				<baseCost>700</baseCost>
+				<techLevel>Medieval</techLevel>
+				<researchViewX>2</researchViewX>
+				<researchViewY>1.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Gunpowder"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Gunpowder</defName>
+				<label>Gunpowder</label>
+				<description>Allows for the creation of early muzzle-loading firearms and thrown explosives via a smithy.</description>
+				<baseCost>600</baseCost>
+				<techLevel>Medieval</techLevel>
+				<prerequisites>
+					<li>RIF_Research_MedievalTech</li>
+				</prerequisites>
+				<tags>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>MedievalEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>2</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="BreechLoading"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>BreechLoading</defName>
+				<label>Breech-Loading</label>
+				<description>Learn how to build breech-loading firearms.</description>
+				<baseCost>500</baseCost>
+				<techLevel>Medieval</techLevel>
+				<prerequisites>
+					<li>Gunpowder</li>
+				</prerequisites>
+				<tags>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>MedievalEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>2</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="BasicProsthetics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>BasicProsthetics</defName>
+				<label>Crude Prosthetics</label>
+				<description>Understanding the shape of a leg and combining that knowledge with basic woodworking, you can now craft peg legs and other basic prostheses.</description>
+				<baseCost>600</baseCost>
+				<techLevel>Medieval</techLevel>
+				<prerequisites>
+					<li>RIF_Research_MedievalTech</li>
+				</prerequisites>
+				<tags>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>MedievalEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>2.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Stonecutting"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Stonecutting</defName>
+				<label>Medieval Stonecutting</label>
+				<description>Build stonecutting tables, which allow you to refine rock chunks into stone blocks that can be used for construction. This is faster than stone chipping.</description>
+				<baseCost>500</baseCost>
+				<techLevel>Medieval</techLevel>
+				<tags>
+					<li>ClassicStart</li>
+				</tags>
+				<prerequisites>
+					<li>RIF_Research_MedievalTech</li>
+				</prerequisites>
+				<tab>MedievalEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="CarpetMaking"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>CarpetMaking</defName>
+				<label>Carpet Making</label>
+				<description>Allows colonists to build carpets to increase the quality of their environments.</description>
+				<baseCost>500</baseCost>
+				<techLevel>Medieval</techLevel>
+				<prerequisites>
+					<li>RIF_Research_MedievalTech</li>
+				</prerequisites>
+				<tags>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>MedievalEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Smithing"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Smithing</defName>
+				<label>Smithing</label>
+				<description>Build smithies for crafting metal weapons and tools.</description>
+				<baseCost>500</baseCost>
+				<techLevel>Medieval</techLevel>
+				<prerequisites>
+					<li>RIF_Research_MedievalTech</li>
+				</prerequisites>
+				<tags>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>MedievalEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>4</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ComplexClothing"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ComplexClothing</defName>
+				<label>Complex Clothing</label>
+				<description>Sew complicated garments like pants, dusters, and cowboy hats.</description>
+				<baseCost>700</baseCost>
+				<techLevel>Medieval</techLevel>
+				<tags>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>MedievalEra</tab>
+				<prerequisites>
+					<li>RIF_Research_MedievalTech</li>
+				</prerequisites>
+				<researchViewX>1</researchViewX>
+				<researchViewY>4.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="CanningMachine"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>CanningMachine</defName>
+				<label>Canning Tech</label>
+				<description>Researches methods of making a machine to can food to preserve them in metal. \n\nUnlocks the canning machine and ablity to can food and meals.</description>
+				<baseCost>700</baseCost>
+				<techLevel>Medieval</techLevel>
+				<prerequisites>
+					<li>RIF_Research_MedievalTech</li>
+				</prerequisites>
+				<tags>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>MedievalEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+</Patch>

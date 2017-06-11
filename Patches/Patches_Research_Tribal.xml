@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="agriculture"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>agriculture</defName>
+				<label>Agriculture I</label>
+				<description>Researches plant genetics to unlock new and exciting new types of plants to grow! \n\n Unlocks a new tier of vegetables to grow. \n\n Unlocks sowing of Eggplants, Beans, Pumpkins, Squash, Tomatoes, Red Lentils, and Mushrooms. Also unlocked research for extra flowers and trees.</description>
+				<baseCost>150</baseCost>
+	    		<techLevel>Neolithic</techLevel>
+				<prerequisites>
+					<li>RIF_Research_TribalTech</li>
+				</prerequisites>
+				<tags>
+					<li>MedievalStart</li>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>Main</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="agricultureII"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>agricultureII</defName>
+				<label>Agriculture II</label>
+				<description>Researches plant genetics to unlock new and exciting new types of plants to grow! \n\n Unlocks a new fruits to grow. Fruit has a higher nutrition and requires less to make meals. \n\n Unlocks sowing of Pinneapples, Grapes, Cloudberries, Gooseberries, Agave, Strawberries, Blueberries, and Watermelons. </description>
+				<baseCost>300</baseCost>
+				<techLevel>Neolithic</techLevel>
+				<prerequisites>
+					<li>agriculture</li>
+				</prerequisites>
+				<tags>
+					<li>MedievalStart</li>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>Main</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Beekeeping"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Beekeeping</defName>
+				<label>Beekeeping</label>
+				<description>Allows you to build a bee hive where you can harvest honey.</description>
+				<descriptionDiscovered>You can now build bee hives and start your honey production.\n\nNote: You'll need a queen bee to build a beehive. You can find them in hollowed trees or buy them from traders.</descriptionDiscovered>
+				<baseCost>200</baseCost>
+				<techLevel>Neolithic</techLevel>
+				<prerequisites>
+					<li>agricultureII</li>
+				</prerequisites>
+				<tags>
+					<li>MedievalStart</li>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>Main</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="flowersandtrees"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>flowersandtrees</defName>
+				<label>Flowers and Trees</label>
+				<description>Research extra Flowers and Trees to plant.</description>
+				<descriptionDiscovered>You can now plant more types of flowers as well as exotic trees.</descriptionDiscovered>
+				<baseCost>150</baseCost>
+				<techLevel>Neolithic</techLevel>
+				<prerequisites>
+					<li>agriculture</li>
+				</prerequisites>
+				<tags>
+					<li>MedievalStart</li>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>Main</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Pemmican"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Pemmican</defName>
+				<label>Pemmican</label>
+				<description>Make Pemmican, a preserved mixture of meat and plant matter that doesn't go bad for a long time. Great for traveling.</description>
+				<baseCost>150</baseCost>
+				<techLevel>Neolithic</techLevel>
+				<tags>
+					<li>TribalStart</li>
+					<li>MedievalStart</li>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>Main</tab>
+				<prerequisites>
+					<li>RIF_Research_TribalTech</li>
+				</prerequisites>
+				<researchViewX>1</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="PassiveCooler"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>PassiveCooler</defName>
+				<label>Passive Cooler</label>
+				<description>Make passive coolers, a way to cool indoor spaces without using electricity.</description>
+				<baseCost>150</baseCost>
+				<techLevel>Neolithic</techLevel>
+				<tags>
+					<li>TribalStart</li>
+					<li>MedievalStart</li>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>Main</tab>
+				<prerequisites>
+					<li>RIF_Research_TribalTech</li>
+				</prerequisites>
+				<researchViewX>1</researchViewX>
+				<researchViewY>4</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Devilstrand"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Devilstrand</defName>
+				<label>Devilstrand</label>
+				<description>Allows colonists to plant devilstrand, a slow-growing mushroom that yields a valuable plant fiber.</description>
+				<baseCost>200</baseCost>
+				<techLevel>Neolithic</techLevel>
+				<tags>
+					<li>TribalStart</li>
+					<li>MedievalStart</li>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>Main</tab>
+				<prerequisites>
+					<li>RIF_Research_TribalTech</li>
+				</prerequisites>
+				<researchViewX>1</researchViewX>
+				<researchViewY>4.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Brewing"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Brewing</defName>
+				<label>Brewing</label>
+				<description>Allows you to build a brewery to transform hops into tasty, tasty beer.</description>
+				<baseCost>300</baseCost>
+				<techLevel>Neolithic</techLevel>
+				<tags>
+					<li>TribalStart</li>
+					<li>MedievalStart</li>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>Main</tab>
+				<prerequisites>
+					<li>RIF_Research_TribalTech</li>
+				</prerequisites>
+				<researchViewX>1</researchViewX>
+				<researchViewY>2.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+</Patch>

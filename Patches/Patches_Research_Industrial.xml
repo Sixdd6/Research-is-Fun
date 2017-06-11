@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="SoilReclamII"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>SoilReclamII</defName>
+				<label>Soil Reclamation II</label>
+				<description>Researches methods of turning sand, marshy soil, mud, marsh, ice and gravel into farmable soil. \n\nUnlocks Plow soil, to greatly increase crop growth. \n\nUnlocks Floor menus to Plow Soil and Reclaim Soil.</description>
+				<tab>EarlyTechEra</tab>
+				<baseCost>1000</baseCost>
+		    		<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>SoilReclam</li>
+				</prerequisites>
+				<researchViewX>1</researchViewX>
+				<researchViewY>2</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="DrugProduction"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>DrugProduction</defName>
+				<label>Drug Production</label>
+				<description>The basics of drug preparation and synthesis. Allows creation of the drug lab. Further research is required to make specific drugs.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>RIF_Research_IndustrialTech</li>
+				</prerequisites>
+				<tab>EarlyTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>2.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="PsychiteRefining"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>PsychiteRefining</defName>
+				<label>Psychite Refining</label>
+				<description>Learn to refine psychoid leaves into flake and yayo, different forms of the euphoric drug psychite.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>DrugProduction</li>
+				</prerequisites>
+				<tab>EarlyTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>1</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="WakeUpProduction"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>WakeUpProduction</defName>
+				<label>Wake-up Production</label>
+				<description>Your chemists learn the formulas and techniques for synthesizing wake-up, a work performance-enhancing drug.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>DrugProduction</li>
+				</prerequisites>
+				<tab>EarlyTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>1.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="GoJuiceProduction"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>GoJuiceProduction</defName>
+				<label>Go-Juice Production</label>
+				<description>Learn to produce the synthetic combat-performance-enhancing drug go-juice.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>DrugProduction</li>
+				</prerequisites>
+				<tab>EarlyTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>2</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="PenoxycylineProduction"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>PenoxycylineProduction</defName>
+				<label>Penoxycyline Production</label>
+				<description>Learn to produce penoxycline, a disease prevention drug.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>DrugProduction</li>
+				</prerequisites>
+				<tab>EarlyTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>2.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="Plumbing"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>Plumbing</defName>
+				<label>Plumbing</label>
+				<description>Use pipes, plumbing fixtures, tanks, and other apparatuses to provide heating, waste removal, and potable water.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>RIF_Research_IndustrialTech</li>
+				</prerequisites>
+				<tab>EarlyTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="CookingI"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>CookingI</defName>
+				<label>Basic Cooking</label>
+				<description>Unlocks new cooking facilities that will allow you to make more refined foods.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>RIF_Research_IndustrialTech</li>
+				</prerequisites>
+				<tab>EarlyTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="PackagedSurvivalMeal"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>PackagedSurvivalMeal</defName>
+				<label>Packaged Survival Meal</label>
+				<description>Learn to produce packaged survival meals, a preserved and sealed food that never goes bad. Great for traveling.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>CookingI</li>
+				</prerequisites>
+				<tab>EarlyTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ABC_Suit"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ABC_Suit</defName>
+				<label>Fallout-Gear</label>
+				<description>Allows colonists craft the ABC-Suit pieces at the tailoring bench. These will surely help with coming toxic fallouts.</description>
+				<BaseCost>1000</BaseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>RIF_Research_IndustrialTech</li>
+					<li>ComplexClothing</li>
+				</prerequisites>
+				<tab>EarlyTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>4</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+</Patch>
