@@ -2,6 +2,43 @@
 <Patch>
 
 	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="BasicTraps"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>BasicTraps</defName>
+				<label>Basic Traps</label>
+				<description>The basics of trap building. Unlocks pitfall traps.</description>
+				<baseCost>300</baseCost>
+				<techLevel>Neolithic</techLevel>
+				<researchViewX>0</researchViewX>
+				<researchViewY>2.5</researchViewY>
+				<tab>Main</tab>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="TribalEssentials"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>TribalEssentials</defName>
+				<label>Tribal Essentials</label>
+				<description>Allows you to build tribal essential furniture, joy objects, production spots and buildings, security items, art, apparel, weapons, walls, floors, food, and more.</description>
+				<baseCost>500</baseCost>
+				<techLevel>Neolithic</techLevel>
+				<tags>
+					<li>TribalStart</li>
+					<li>MedievalStart</li>
+					<li>ClassicStart</li>
+				</tags>
+				<tab>Main</tab>
+				<researchViewX>0</researchViewX>
+				<researchViewY>2</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="agriculture"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -47,7 +84,7 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
+<!-- 	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="Beekeeping"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -69,7 +106,7 @@
 				<researchViewY>3</researchViewY>
 			</ResearchProjectDef>
 		</value>
-	</Operation>
+	</Operation> -->
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="flowersandtrees"]</xpath>

@@ -65,6 +65,65 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="EXP_InsulatedCable"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>EXP_InsulatedCable</defName>
+				<label>Insulated Cables</label>
+				<description>Allows colonists to smith insulated cables, which can be buried under the ground or used in more advanced recipes.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Electricity</li>
+					<li>Smithing</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="EXP_InsulatedBattery"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>EXP_InsulatedBattery</defName>
+				<label>Insulated Batteries</label>
+				<description>Allows you to build insulated batteries, for those times you absolutely must place a battery outside or in the heat.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Batteries</li>
+					<li>EXP_InsulatedCable</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="EXP_Diodes"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>EXP_Diodes</defName>
+				<label>Diodes</label>
+				<description>Allows colonists to build diodes, anodes, and cathodes for constructing one-way power distribution.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Electricity</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>2.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="LargeBatteries"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -74,12 +133,12 @@
 				<baseCost>1500</baseCost>
 				<techLevel>Industrial</techLevel>
 				<prerequisites>
-					<li>Batteries</li>
+					<li>EXP_InsulatedBattery</li>
 					<li>FluffyBreakdowns_ComponentLifetimeOne</li>
 				</prerequisites>
 				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 				<tab>MiddleTechEra</tab>
-				<researchViewX>3</researchViewX>
+				<researchViewX>4</researchViewX>
 				<researchViewY>3</researchViewY>
 			</ResearchProjectDef>
 		</value>

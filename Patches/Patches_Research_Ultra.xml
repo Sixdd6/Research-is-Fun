@@ -2,6 +2,25 @@
 <Patch>
 
 	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="VG_ClothII"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>VG_ClothII</defName>
+				<label>Hyperweave</label>
+				<description>Researches methods of weaving hyperweave.\n Unlocks the recipe for hyperweave at the loom.</description>
+				<baseCost>10000</baseCost>
+				<techLevel>Ultra</techLevel>
+				<prerequisites>
+					<li>VG_ClothI</li>
+				</prerequisites>
+				<tab>UltraEra</tab>
+				<researchViewX>0</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="sd_adv_powergen_research_adv_geo"]</xpath>
 		<value>
 			<ResearchProjectDef>

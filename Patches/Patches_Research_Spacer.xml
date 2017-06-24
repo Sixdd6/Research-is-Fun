@@ -117,6 +117,46 @@
 		</value>
 	</Operation>
 
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="VG_Ambrosia"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>VG_Ambrosia</defName>
+				<label>Ambrosia</label>
+				<description>Researches the ability to grow ambrosia in hydroponic basins.</description>
+				<baseCost>3500</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>AdvancedHydroponics</li>
+				</prerequisites>
+				<tab>SpacerEra</tab>
+ 				<researchViewX>0</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="VG_ClothI"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>VG_ClothI</defName>
+				<label>Synthread</label>
+				<description>Researches methods of weaving synthread. \nUnlocks the recipe for synthread at the loom.</description>
+				<baseCost>750</baseCost>
+				    <techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Devilstrand</li>
+					<li>ComplexClothing</li>
+				</prerequisites>
+				<tab>SpacerEra</tab>
+				<researchViewX>0</researchViewX>
+				<researchViewY>4</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
 	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="LongRangeMineralScanner"]</xpath>
 		<value>
@@ -472,7 +512,7 @@
 			<ResearchProjectDef>
 				<defName>NeuralImplants</defName>
 				<label>Nerve Staples</label>
-				<description>Allows the production nerve staples from plasteel microcomponents.</description>
+				<description>Allows the production of nerve staples from plasteel microcomponents.</description>
 				<baseCost>5000</baseCost>
 				<techLevel>Spacer</techLevel>
 				<prerequisites>

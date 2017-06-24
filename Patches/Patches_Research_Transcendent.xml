@@ -2,6 +2,25 @@
 <Patch>
 
 	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="VG_GlitterMeds"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>VG_GlitterMeds</defName>
+				<label>Glitterworld Medicine</label>
+				<description>Allows you to craft glitterworld medicine.</description>
+				<baseCost>10000</baseCost>
+				<techLevel>Transcendent</techLevel>
+				<prerequisites>
+					<li>MedicineProduction</li>
+				</prerequisites>
+				<tab>TranscendentEra</tab>
+				<researchViewX>0</researchViewX>
+				<researchViewY>2.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="BrainSurgery"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -72,7 +91,7 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
+<!-- 	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="MassStorage"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -93,7 +112,7 @@
 	    		<researchViewY>3</researchViewY>
 	    	</ResearchProjectDef>
 	    </value>
-	</Operation>
+	</Operation> -->
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="MRE_Tier4_Robotics"]</xpath>
@@ -146,8 +165,8 @@
 			<ResearchProjectDef>
 				<defName>ResearchProject_RTMagneticShield</defName>
 				<label>Solar Flare Shielding</label>
-				<description>Allows construction of a magnetic shield to protect electric devices in the entire colony from solar flares.\n\nWhen idle, the shield requires a pittance of power to maintain it's detection circuits, ever ready to activate whenever a solar flare occurs. Should that happen, the shield will start drawing up to 25 kWt of power in order to form a semblance of localized magnetosphere, neutralizing the effect a solar flare would have on colony's electronics. Effective range of this protection is enough to cover the colony and then some.\n\nEeven reduced by the shield, excessive electromagnetic fluctuations caused by the flare will still render more sensitive devices like comms consoles inoperable.</description>
-				<baseCost>10000</baseCost>
+				<description>Allows construction of a magnetic shield to protect electric devices in the entire colony from solar flares.</description>
+				<baseCost>15000</baseCost>
 				<techLevel>Transcendent</techLevel>
 				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 				<prerequisites>

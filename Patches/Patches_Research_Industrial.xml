@@ -172,7 +172,7 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
+<!-- 	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="ABC_Suit"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -190,6 +190,6 @@
 				<researchViewY>4</researchViewY>
 			</ResearchProjectDef>
 		</value>
-	</Operation>
+	</Operation> -->
 
 </Patch>

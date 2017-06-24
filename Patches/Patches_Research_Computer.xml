@@ -117,7 +117,7 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
+<!-- 	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="ToxAwayProduction"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -135,7 +135,7 @@
 				<researchViewY>3</researchViewY>
 			</ResearchProjectDef>
 		</value>
-	</Operation>
+	</Operation> -->
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="HospitalBed"]</xpath>

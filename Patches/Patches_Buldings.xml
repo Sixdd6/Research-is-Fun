@@ -59,10 +59,20 @@
 		</value>
 	</Operation> -->
 
-	<Operation Class="PatchOperationInsert">
-		<xpath>*/ThingDef[defName="StoneChippingSpot"]/defName</xpath>
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="ResearchingSpot"]/researchPrerequisites</xpath>
 		<value>
-			<researchPrerequisites><li>RIF_TribalStonecutting</li></researchPrerequisites>
+			<researchPrerequisites>
+			</researchPrerequisites>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="StoneChippingSpot"]/researchPrerequisites</xpath>
+		<value>
+			<researchPrerequisites>
+				<li>RIF_TribalStonecutting</li>
+			</researchPrerequisites>
 		</value>
 	</Operation>
 

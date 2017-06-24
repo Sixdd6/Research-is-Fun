@@ -12,7 +12,7 @@
 			<li>MultiAnalyzer</li>
 		</requiredResearchFacilities>
 		<prerequisites>
-			<li>SpacerTech</li>
+			<li>RIF_SpacerTech</li>
 		</prerequisites>
 		<tab>UltraEra</tab>
 		<researchViewX>0</researchViewX>
