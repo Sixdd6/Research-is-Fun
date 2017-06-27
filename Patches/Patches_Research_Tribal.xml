@@ -84,6 +84,25 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="RFF_Farming"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>RFF_Farming</defName>
+				<label>Farming</label>
+				<description>This research represents advanced farming techniques such as tillage, that go beyond simple fertilization of soil. It allows soil to be plowed, so that even naturally-rich soil can be improved. It also allows topsoil to be layered over smooth stone, so that farms can be created in inhospitable environments or inside of mountains.</description>
+				<baseCost>500</baseCost>
+				<techLevel>Neolithic</techLevel>
+				<prerequisites>
+					<li>agricultureII</li>
+				</prerequisites>
+				<tab>Main</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
 <!-- 	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="Beekeeping"]</xpath>
 		<value>

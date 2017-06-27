@@ -139,6 +139,29 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="AnimalBionics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>AnimalBionics</defName>
+				<label>Animal Bionics</label>
+				<description>Learn to use and craft animal bionics</description>
+				<baseCost>7000</baseCost>
+				<techLevel>Ultra</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<prerequisites>
+					<li>AdvancedBionics</li>
+				</prerequisites>
+				<tab>UltraEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="SyntheticOrgans"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -156,7 +179,7 @@
 				</prerequisites>
 				<tab>UltraEra</tab>
 				<researchViewX>2</researchViewX>
-				<researchViewY>3.5</researchViewY>
+				<researchViewY>3</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>

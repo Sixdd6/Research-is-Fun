@@ -132,6 +132,25 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="SimpleAnimalProsthetics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>SimpleAnimalProsthetics</defName>
+				<label>Animal Prosthetics</label>
+				<description>Learn to use and craft simple animal prosthetics</description>
+				<baseCost>500</baseCost>
+				<techLevel>Neolithic</techLevel>
+				<prerequisites>
+					<li>RIF_Research_MedievalTech</li>
+				</prerequisites>
+				<tab>MedievalEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="Stonecutting"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -148,7 +167,27 @@
 				</prerequisites>
 				<tab>MedievalEra</tab>
 				<researchViewX>1</researchViewX>
-				<researchViewY>3</researchViewY>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="RFF_Terraforming"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>RFF_Terraforming</defName>
+				<label>Terraforming</label>
+				<description>Terraforming represents knowledge of sophisticated irrigation and drainage methods which allow a wide variety of terrain conversions. Sand, marsh, mud or shallow water, for example, can be turned into farmable land. Artificial lakes can be created. And stone floors can be broken up and turned into actual soil.</description>
+				<baseCost>750</baseCost>
+				<techLevel>Medieval</techLevel>
+				<prerequisites>
+					<li>Stonecutting</li>
+					<li>RFF_Farming</li>
+				</prerequisites>
+				<tab>MedievalEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>3.5</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>
@@ -170,7 +209,7 @@
 				</tags>
 				<tab>MedievalEra</tab>
 				<researchViewX>1</researchViewX>
-				<researchViewY>3.5</researchViewY>
+				<researchViewY>4</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>
@@ -192,7 +231,7 @@
 				</tags>
 				<tab>MedievalEra</tab>
 				<researchViewX>1</researchViewX>
-				<researchViewY>4</researchViewY>
+				<researchViewY>4.5</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>
@@ -214,7 +253,7 @@
 					<li>RIF_Research_MedievalTech</li>
 				</prerequisites>
 				<researchViewX>1</researchViewX>
-				<researchViewY>4.5</researchViewY>
+				<researchViewY>5</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>
@@ -236,7 +275,7 @@
 				</tags>
 				<tab>MedievalEra</tab>
 				<researchViewX>1</researchViewX>
-				<researchViewY>5</researchViewY>
+				<researchViewY>5.5</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>

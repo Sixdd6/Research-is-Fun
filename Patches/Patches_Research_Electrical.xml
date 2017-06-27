@@ -49,7 +49,7 @@
 				<defName>Batteries</defName>
 				<label>Batteries</label>
 				<description>Build batteries for storing electricity.</description>
-				<baseCost>1500</baseCost>
+				<baseCost>1000</baseCost>
 				<techLevel>Industrial</techLevel>
 				<prerequisites>
 					<li>Electricity</li>
@@ -74,8 +74,7 @@
 				<baseCost>1000</baseCost>
 				<techLevel>Industrial</techLevel>
 				<prerequisites>
-					<li>Electricity</li>
-					<li>Smithing</li>
+					<li>Batteries</li>
 				</prerequisites>
 				<tab>MiddleTechEra</tab>
 				<researchViewX>2</researchViewX>
@@ -94,7 +93,6 @@
 				<baseCost>1500</baseCost>
 				<techLevel>Industrial</techLevel>
 				<prerequisites>
-					<li>Batteries</li>
 					<li>EXP_InsulatedCable</li>
 				</prerequisites>
 				<tab>MiddleTechEra</tab>
@@ -105,20 +103,22 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>*/ResearchProjectDef[defName="EXP_Diodes"]</xpath>
+		<xpath>*/ResearchProjectDef[defName="EXP_EnhancedBattery"]</xpath>
 		<value>
 			<ResearchProjectDef>
-				<defName>EXP_Diodes</defName>
-				<label>Diodes</label>
-				<description>Allows colonists to build diodes, anodes, and cathodes for constructing one-way power distribution.</description>
-				<baseCost>1000</baseCost>
+				<defName>EXP_EnhancedBattery</defName>
+				<label>Enhanced Batteries</label>
+				<description>Allows colonists to build enhanced batteries, which are more efficient and store more energy.</description>
+				<baseCost>1500</baseCost>
 				<techLevel>Industrial</techLevel>
 				<prerequisites>
-					<li>Electricity</li>
+					<li>EXP_InsulatedBattery</li>
+					<li>FluffyBreakdowns_ComponentLifetimeOne</li>
 				</prerequisites>
 				<tab>MiddleTechEra</tab>
-				<researchViewX>1</researchViewX>
-				<researchViewY>2.5</researchViewY>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<researchViewX>4</researchViewX>
+				<researchViewY>3</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>
@@ -130,15 +130,14 @@
 				<defName>LargeBatteries</defName>
 				<label>Large Batteries</label>
 				<description>Build large batteries for efficient storage of electricity. Unlocks the 4k and 16k battery cell.</description>
-				<baseCost>1500</baseCost>
+				<baseCost>2000</baseCost>
 				<techLevel>Industrial</techLevel>
 				<prerequisites>
-					<li>EXP_InsulatedBattery</li>
-					<li>FluffyBreakdowns_ComponentLifetimeOne</li>
+					<li>EXP_EnhancedBattery</li>
 				</prerequisites>
 				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 				<tab>MiddleTechEra</tab>
-				<researchViewX>4</researchViewX>
+				<researchViewX>5</researchViewX>
 				<researchViewY>3</researchViewY>
 			</ResearchProjectDef>
 		</value>
@@ -221,6 +220,25 @@
 				<tab>MiddleTechEra</tab>
 				<researchViewX>1</researchViewX>
 				<researchViewY>4.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="EXP_Diodes"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>EXP_Diodes</defName>
+				<label>Diodes</label>
+				<description>Allows colonists to build diodes, anodes, and cathodes for constructing one-way power distribution.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>Electricity</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>5</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>
