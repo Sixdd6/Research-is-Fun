@@ -9,7 +9,7 @@
 				<label>Self-Loading Actions</label>
 				<description>Learn how to create complex self-loading guns.</description>
 				<baseCost>2500</baseCost>
-				<techLevel>Spacer</techLevel>
+				<techLevel>Industrial</techLevel>
 				<prerequisites>
 					<li>Machining</li>
 					<li>Electricity</li>
