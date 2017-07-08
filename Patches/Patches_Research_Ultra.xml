@@ -81,8 +81,8 @@
 					<li>MultiAnalyzer</li>
 				</requiredResearchFacilities>
 				<prerequisites>
-					<li>AirConditioning</li>
 					<li>RIF_UltraConcepts</li>
+					<li>QC_Research_QuantumCooler_I</li>
 				</prerequisites>
 				<tab>UltraEra</tab>
 				<researchViewX>1</researchViewX>

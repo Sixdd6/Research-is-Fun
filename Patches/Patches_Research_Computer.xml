@@ -305,6 +305,27 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="QC_Research_QuantumCooler_I"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>QC_Research_QuantumCooler_I</defName>
+				<label>Quantum Prototype</label>
+				<description>Required to unlock the Prototype Quantum Cooler. Could it really be possible?</description>
+				<baseCost>2500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<prerequisites>
+					<li>AirConditioning</li>
+					<li>MultiAnalyzer</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="MRE_Entry_Robotics"]</xpath>
 		<value>
 			<ResearchProjectDef>

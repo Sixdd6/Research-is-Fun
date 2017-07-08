@@ -518,26 +518,6 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>*/ResearchProjectDef[defName="QC_Research_QuantumCooler_I"]</xpath>
-		<value>
-			<ResearchProjectDef>
-				<defName>QC_Research_QuantumCooler_I</defName>
-				<label>Quantum Prototype</label>
-				<description>Required to unlock the Prototype Quantum Cooler. Could it really be possible?</description>
-				<baseCost>1000</baseCost>
-				<techLevel>Industrial</techLevel>
-				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-				<prerequisites>
-					<li>AirConditioning</li>
-				</prerequisites>
-				<tab>MiddleTechEra</tab>
-				<researchViewX>2</researchViewX>
-				<researchViewY>0</researchViewY>
-			</ResearchProjectDef>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="Machining"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -597,6 +577,45 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="RH_TemperatureControlHeating"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>RH_TemperatureControlHeating</defName>
+				<label>Industrial Heating</label>
+				<description>Allows you to build industrial heaters.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>IndustrialDrill</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>0.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="RH_TemperatureControlCooling"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>RH_TemperatureControlCooling</defName>
+				<label>Industrial Cooling</label>
+				<description>Allows you to build industrial coolers.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>RH_TemperatureControlHeating</li>
+					<li>AirConditioning</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>4</researchViewX>
+				<researchViewY>0.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="MoisturePump"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -611,7 +630,7 @@
 				<tab>MiddleTechEra</tab>
 				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 				<researchViewX>3</researchViewX>
-				<researchViewY>0.5</researchViewY>
+				<researchViewY>1</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>
@@ -649,7 +668,7 @@
 				</prerequisites>
 				<tab>MiddleTechEra</tab>
 				<researchViewX>3</researchViewX>
-				<researchViewY>1</researchViewY>
+				<researchViewY>1.5</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>
@@ -668,7 +687,7 @@
 				</prerequisites>
 				<tab>MiddleTechEra</tab>
 				<researchViewX>4</researchViewX>
-				<researchViewY>1</researchViewY>
+				<researchViewY>1.5</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>
