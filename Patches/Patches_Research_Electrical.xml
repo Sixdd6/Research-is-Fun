@@ -24,6 +24,25 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ImprovedCabinet"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ImprovedCabinet</defName>
+				<label>Improved Cabinet</label>
+				<tab>MiddleTechEra</tab>
+				<description>Allows building an improved version of the tool cabinet.</description>
+				<baseCost>1000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>RIF_Research_IndustrialTech</li>
+				</prerequisites>
+				<researchViewX>0</researchViewX>
+				<researchViewY>2</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="SolarPanels"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -279,6 +298,27 @@
 				</prerequisites>
 				<tab>MiddleTechEra</tab>
 				<researchViewX>1</researchViewX>
+				<researchViewY>0</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ResearchLockableAutodoor"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ResearchLockableAutodoor</defName>
+				<label>Locking Autodoors</label>
+				<description>Research advanced door locking mechanisms to secure your automatic doors from others.</description>
+				<descriptionDiscovered>Finally, secure your sleep and valuables from the invasiveness of others!</descriptionDiscovered>
+				<baseCost>2000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>ResearchLockableDoor</li>
+					<li>Autodoors</li>
+				</prerequisites>
+				<tab>MiddleTechEra</tab>
+				<researchViewX>2</researchViewX>
 				<researchViewY>0</researchViewY>
 			</ResearchProjectDef>
 		</value>
@@ -571,45 +611,6 @@
 				</prerequisites>
 				<tab>MiddleTechEra</tab>
 				<researchViewX>2</researchViewX>
-				<researchViewY>0.5</researchViewY>
-			</ResearchProjectDef>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>*/ResearchProjectDef[defName="RH_TemperatureControlHeating"]</xpath>
-		<value>
-			<ResearchProjectDef>
-				<defName>RH_TemperatureControlHeating</defName>
-				<label>Industrial Heating</label>
-				<description>Allows you to build industrial heaters.</description>
-				<baseCost>1500</baseCost>
-				<techLevel>Industrial</techLevel>
-				<prerequisites>
-					<li>IndustrialDrill</li>
-				</prerequisites>
-				<tab>MiddleTechEra</tab>
-				<researchViewX>3</researchViewX>
-				<researchViewY>0.5</researchViewY>
-			</ResearchProjectDef>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>*/ResearchProjectDef[defName="RH_TemperatureControlCooling"]</xpath>
-		<value>
-			<ResearchProjectDef>
-				<defName>RH_TemperatureControlCooling</defName>
-				<label>Industrial Cooling</label>
-				<description>Allows you to build industrial coolers.</description>
-				<baseCost>1500</baseCost>
-				<techLevel>Industrial</techLevel>
-				<prerequisites>
-					<li>RH_TemperatureControlHeating</li>
-					<li>AirConditioning</li>
-				</prerequisites>
-				<tab>MiddleTechEra</tab>
-				<researchViewX>4</researchViewX>
 				<researchViewY>0.5</researchViewY>
 			</ResearchProjectDef>
 		</value>

@@ -2,17 +2,17 @@
 <Patch>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>*/ResearchProjectDef[defName="AdvancedManagingSoftware"]</xpath>
+		<xpath>*/ResearchProjectDef[defName="AutonomySoftware2"]</xpath>
 		<value>
 			<ResearchProjectDef>
-				<defName>AdvancedManagingSoftware</defName>
-				<label>Advanced Managing Software</label>
-				<description>Develop advanced software for colony management.\n\nAdvancements in AI and colony-aware computers allow the building of Colony Aware Supercomputers, preinstalled with FluffyOS. Some colonists have reported doors opening and closing, airconditioning systems going haywire, and electric smelters suddenly turning on. Nevertheless, the manufacturer guarantees(tm) that FluffyOS is not programmed to kill colonists.</description>
+				<defName>AutonomySoftware2</defName>
+				<label>Advanced Autonomy Software</label>
+				<description>Enhance robot software with visual cognition processors.</description>
 				<baseCost>7000</baseCost>
 				<techLevel>Spacer</techLevel>
 				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 				<prerequisites>
-					<li>ManagingSoftware</li>
+					<li>AutonomySoftware1</li>
 					<li>RIF_SpacerTech</li>
 				</prerequisites>
 				<tab>SpacerEra</tab>
@@ -20,29 +20,6 @@
 				<researchViewY>4</researchViewY>
 			</ResearchProjectDef>
 	    </value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>*/ResearchProjectDef[defName="PowerManagement"]</xpath>
-		<value>
-			<ResearchProjectDef>
-				<defName>PowerManagement</defName>
-				<label>Power Management</label>
-				<description>Create management software to monitor the colony's power usage.</description>
-				<baseCost>5000</baseCost>
-				<techLevel>Spacer</techLevel>
-				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-				<prerequisites>
-					<li>AdvancedManagingSoftware</li>
-				</prerequisites>
-				<researchMods>
-					<li Class="FluffyManager.UnlockPowerTab" />
-				</researchMods>
-				<tab>SpacerEra</tab>
-				<researchViewX>2</researchViewX>
-				<researchViewY>4.15</researchViewY>
-			</ResearchProjectDef>
-		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
@@ -133,26 +110,6 @@
 				<tab>SpacerEra</tab>
  				<researchViewX>0</researchViewX>
 				<researchViewY>3.5</researchViewY>
-			</ResearchProjectDef>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>*/ResearchProjectDef[defName="VG_ClothI"]</xpath>
-		<value>
-			<ResearchProjectDef>
-				<defName>VG_ClothI</defName>
-				<label>Synthread</label>
-				<description>Researches methods of weaving synthread. \nUnlocks the recipe for synthread at the loom.</description>
-				<baseCost>750</baseCost>
-				    <techLevel>Industrial</techLevel>
-				<prerequisites>
-					<li>Devilstrand</li>
-					<li>ComplexClothing</li>
-				</prerequisites>
-				<tab>SpacerEra</tab>
-				<researchViewX>0</researchViewX>
-				<researchViewY>4</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>
@@ -507,6 +464,27 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="VG_ClothI"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>VG_ClothI</defName>
+				<label>Synthread</label>
+				<description>Researches methods of weaving synthread.\nUnlocks the recipe for synthread at the loom.</description>
+				<baseCost>750</baseCost>
+			    <techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>RIF_SpacerTech</li>
+					<li>Devilstrand</li>
+					<li>ComplexClothing</li>
+				</prerequisites>
+				<tab>SpacerEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>6.45</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="NeuralImplants"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -578,17 +556,39 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="AdvancedMultiAnalyzer"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>AdvancedMultiAnalyzer</defName>
+				<label>Advanced Multi-Analyzer</label>
+				<tab>SpacerEra</tab>
+				<description>Allows building the upgraded version of the multi-analyzer that will speed up even more your research.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>EnergizedComponents</li>
+				</prerequisites>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<researchViewX>3</researchViewX>
+				<researchViewY>4.65</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="MRE_Tier2_Robotics"]</xpath>
 		<value>
 			<ResearchProjectDef>
 				<defName>MRE_Tier2_Robotics</defName>
 				<label>Robotics: Tier 2 Robots</label>
-				<description>Power management improvements have revealed further research into construction of farming, cooking and mining robots.</description>
+				<description>Visual cognition processor improvements have revealed applications in farming, cooking and mining.</description>
 				<baseCost>5000</baseCost>
 				<techLevel>Spacer</techLevel>
 				<prerequisites>
 					<li>MRE_Tier1_Robotics</li>
-					<li>PowerManagement</li>
+					<li>AutonomySoftware2</li>
 				</prerequisites>
 				<tab>SpacerEra</tab>
 				<researchViewX>3</researchViewX>
@@ -607,14 +607,14 @@
 				<baseCost>5000</baseCost>
 				<techLevel>Spacer</techLevel>
 				<prerequisites>
-					<li>EnergizedComponents</li>
+					<li>AdvancedMultiAnalyzer</li>
 				</prerequisites>
 				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 				<requiredResearchFacilities>
 					<li>MultiAnalyzer</li>
 				</requiredResearchFacilities>
 				<tab>SpacerEra</tab>
-				<researchViewX>3</researchViewX>
+				<researchViewX>4</researchViewX>
 				<researchViewY>4.65</researchViewY>
 			</ResearchProjectDef>
 		</value>

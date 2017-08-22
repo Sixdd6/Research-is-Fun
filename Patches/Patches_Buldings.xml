@@ -132,14 +132,14 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationInsert">
+<!-- 	<Operation Class="PatchOperationInsert">
 		<xpath>*/ThingDef[DefName="FM_BasicManagerStation"]/DefName</xpath>
 		<value>
 			<researchPrerequisites><li>RIF_Research_IndustrialTech</li></researchPrerequisites>
 		</value>
-	</Operation>
+	</Operation> -->
 
-	<Operation Class="PatchOperationSequence">
+<!-- 	<Operation Class="PatchOperationSequence">
 		<success>Always</success>
 		<Operations>
 			<li Class="PatchOperationTest">
@@ -202,6 +202,6 @@
 				<xpath>*/ThingDef[defName="RBB_Boardwalk"]/costList</xpath>
 			</li>
 		</Operations>
-	</Operation>
+	</Operation> -->
 
 </Patch>

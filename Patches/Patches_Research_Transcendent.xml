@@ -11,10 +11,11 @@
 				<baseCost>10000</baseCost>
 				<techLevel>Transcendent</techLevel>
 				<prerequisites>
+					<li>RIF_TranscendentConcepts</li>
 					<li>MedicineProduction</li>
 				</prerequisites>
 				<tab>TranscendentEra</tab>
-				<researchViewX>0</researchViewX>
+				<researchViewX>1</researchViewX>
 				<researchViewY>2.5</researchViewY>
 			</ResearchProjectDef>
 		</value>
@@ -115,26 +116,6 @@
 	</Operation> -->
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>*/ResearchProjectDef[defName="MRE_Tier4_Robotics"]</xpath>
-		<value>
-			<ResearchProjectDef>
-				<defName>MRE_Tier4_Robotics</defName>
-				<label>Robotics: Tier 4 Robots</label>
-				<description>Further research reveals construction of intelligent robots capable of many tasks that they learn through experience.</description>
-				<baseCost>15000</baseCost>
-				<techLevel>Transcendent</techLevel>
-				<prerequisites>
-					<li>MRE_Tier3_Robotics</li>
-					<li>NeurotrainerMaking</li>
-				</prerequisites>
-				<tab>TranscendentEra</tab>
-				<researchViewX>3</researchViewX>
-				<researchViewY>3.5</researchViewY>
-			</ResearchProjectDef>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="ArtCraftingII"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -154,7 +135,27 @@
 				</requiredResearchFacilities>
 				<tab>TranscendentEra</tab>
 				<researchViewX>3</researchViewX>
-				<researchViewY>4.15</researchViewY>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="MRE_Tier4_Robotics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>MRE_Tier4_Robotics</defName>
+				<label>Robotics: Tier 4 Robots</label>
+				<description>Research into how robots think and create art reveals construction of intelligent robots capable of learning from their experiences. These robots require an AI core to function.</description>
+				<baseCost>20000</baseCost>
+				<techLevel>Transcendent</techLevel>
+				<prerequisites>
+					<li>MRE_Tier3_Robotics</li>
+					<li>ArtCraftingII</li>
+				</prerequisites>
+				<tab>TranscendentEra</tab>
+				<researchViewX>4</researchViewX>
+				<researchViewY>3.5</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>
@@ -174,7 +175,7 @@
 				</prerequisites>
 				<tab>TranscendentEra</tab>
 				<researchViewX>3</researchViewX>
-				<researchViewY>4.65</researchViewY>
+				<researchViewY>4</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>
