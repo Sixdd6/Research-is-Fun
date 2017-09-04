@@ -132,7 +132,6 @@
 		</value>
 	</Operation>
 
-<<<<<<< HEAD
 	<Operation Class="PatchOperationSequence">
 		<success>Always</success>
 		<Operations>
@@ -258,8 +257,6 @@
 		</Operations>
 	</Operation>
 
-=======
->>>>>>> ab1249bf824205e05aa29464a872122780e95a27
 <!-- 	<Operation Class="PatchOperationInsert">
 		<xpath>*/ThingDef[DefName="FM_BasicManagerStation"]/DefName</xpath>
 		<value>
