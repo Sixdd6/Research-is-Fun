@@ -52,6 +52,13 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationInsert">
+		<xpath>*/ThingDef[defName="WindTurbine"]/defName</xpath>
+		<value>
+			<researchPrerequisites><li>RIF_Research_WindPower</li></researchPrerequisites>
+		</value>
+	</Operation>
+
 <!-- 	<Operation Class="PatchOperationInsert">
 		<xpath>*/ThingDef[DefName="TableStonecutter"]/DefName</xpath>
 		<value>
