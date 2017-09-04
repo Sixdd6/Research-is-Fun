@@ -40,26 +40,6 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>*/ResearchProjectDef[defName="ManagingSoftware"]</xpath>
-		<value>
-			<ResearchProjectDef>
-				<defName>ManagingSoftware</defName>
-				<label>Basic Managing Software</label>
-				<description>Develop basic software for colony management.\n\nAllows building manager desks with a computer, pre-installed with a host of guaranteed bug free(tm) managing software.</description>
-				<baseCost>1500</baseCost>
-				<techLevel>Industrial</techLevel>
-				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-				<prerequisites>
-					<li>MicroelectronicsBasics</li>
-				</prerequisites>
-				<tab>LateTechEra</tab>
-				<researchViewX>1</researchViewX>
-				<researchViewY>0.85</researchViewY>
-			</ResearchProjectDef>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="TubeTelevision"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -245,20 +225,20 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>*/ResearchProjectDef[defName="MedicineProduction"]</xpath>
+		<xpath>*/ResearchProjectDef[defName="MechanicsCabinet"]</xpath>
 		<value>
 			<ResearchProjectDef>
-				<defName>MedicineProduction</defName>
-				<label>Medicine Production</label>
-				<description>Produce medicine from healroot medicine, neutroamine, and cloth.</description>
-				<baseCost>2000</baseCost>
+				<defName>MechanicsCabinet</defName>
+				<label>Mechanics Cabinet</label>
+				<tab>LateTechEra</tab>
+				<description>Allows building of a more advanced tool cabinet.</description>
+				<baseCost>1500</baseCost>
 				<techLevel>Industrial</techLevel>
 				<prerequisites>
-					<li>DrugProduction</li>
+					<li>MicroelectronicsBasics</li>
+					<li>ImprovedCabinet</li>
 				</prerequisites>
-				<tab>LateTechEra</tab>
-				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-				<researchViewX>0</researchViewX>
+				<researchViewX>1</researchViewX>
 				<researchViewY>5</researchViewY>
 			</ResearchProjectDef>
 		</value>
@@ -277,7 +257,7 @@
 					<li>MedicineProduction</li>
 				</prerequisites>
 				<tab>LateTechEra</tab>
-				<researchViewX>1</researchViewX>
+				<researchViewX>0</researchViewX>
 				<researchViewY>5</researchViewY>
 			</ResearchProjectDef>
 		</value>
@@ -326,17 +306,40 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="AutonomySoftware1"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>AutonomySoftware1</defName>
+				<label>Basic Autonomy Software</label>
+				<description>Develop basic autonomy software for robotics.</description>
+				<baseCost>1500</baseCost>
+				<techLevel>Industrial</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<prerequisites>
+					<li>MicroelectronicsBasics</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+				<researchViewX>1</researchViewX>
+				<researchViewY>0.85</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="MRE_Entry_Robotics"]</xpath>
 		<value>
 			<ResearchProjectDef>
 				<defName>MRE_Entry_Robotics</defName>
 				<label>Robotics: Concepts</label>
-				<description>Research into the basic ideas and concepts of robotics.</description>
+				<description>Research into the basic ideas and designs of robots.</description>
 				<baseCost>2500</baseCost>
 				<techLevel>Industrial</techLevel>
 				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
 				<prerequisites>
-					<li>ManagingSoftware</li>
+					<li>AutonomySoftware1</li>
 				</prerequisites>
 				<tab>LateTechEra</tab>
 				<researchViewX>2</researchViewX>
@@ -351,10 +354,13 @@
 			<ResearchProjectDef>
 				<defName>MRE_Tier1_Robotics</defName>
 				<label>Robotics: Tier 1 Robots</label>
-				<description>Further research reveals construction of cleaning and hauling robots.</description>
+				<description>Bridging hardware and software has unlocked cleaning and hauling robots at the Maching Table.</description>
 				<baseCost>2500</baseCost>
 				<techLevel>Industrial</techLevel>
 				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
 				<prerequisites>
 					<li>MRE_Entry_Robotics</li>
 				</prerequisites>
@@ -375,6 +381,7 @@
 				<baseCost>5000</baseCost>
 				<techLevel>Industrial</techLevel>
 				<prerequisites>
+					<li>MicroelectronicsBasics</li>
 					<li>LargeBatteries</li>
 				</prerequisites>
 				<tab>LateTechEra</tab>
@@ -401,6 +408,26 @@
 				<tab>LateTechEra</tab>
 				<researchViewX>2</researchViewX>
 				<researchViewY>5.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="VG_Ambrosia"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>VG_Ambrosia</defName>
+				<label>Ambrosia</label>
+				<description>Researches the ability to grow ambrosia in hydroponic basins.</description>
+				<baseCost>5000</baseCost>
+				<techLevel>Industrial</techLevel>
+				<prerequisites>
+					<li>MultiAnalyzer</li>
+					<li>AdvancedHydroponics</li>
+				</prerequisites>
+				<tab>LateTechEra</tab>
+ 				<researchViewX>2</researchViewX>
+				<researchViewY>6</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>

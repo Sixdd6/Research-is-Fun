@@ -10,9 +10,13 @@
 				<description>The basics of trap building. Unlocks pitfall traps.</description>
 				<baseCost>300</baseCost>
 				<techLevel>Neolithic</techLevel>
+				<tab>Main</tab>
+				<tags>
+					<li>MedievalStart</li>
+					<li>ClassicStart</li>
+				</tags>
 				<researchViewX>0</researchViewX>
 				<researchViewY>2.5</researchViewY>
-				<tab>Main</tab>
 			</ResearchProjectDef>
 		</value>
 	</Operation>
@@ -23,7 +27,7 @@
 			<ResearchProjectDef>
 				<defName>TribalEssentials</defName>
 				<label>Tribal Essentials</label>
-				<description>Allows you to build tribal essential furniture, joy objects, production spots and buildings, security items, art, apparel, weapons, walls, floors, food, and more.</description>
+				<description>Allows you to build essential tribal furniture, joy objects, production spots and buildings, security items, art, apparel, weapons, walls, floors, food, and more.</description>
 				<baseCost>500</baseCost>
 				<techLevel>Neolithic</techLevel>
 				<tags>
@@ -34,6 +38,26 @@
 				<tab>Main</tab>
 				<researchViewX>0</researchViewX>
 				<researchViewY>2</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="BasicHarvesting"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>BasicHarvesting</defName>
+				<label>Basic Harvesting</label>
+				<description>Knowledge how to extract parts of basic complexity from corpses.</description>
+				<baseCost>500</baseCost>
+				<techLevel>Neolithic</techLevel>
+    		    <tab>Main</tab>
+				<tags>
+					<li>MedievalStart</li>
+					<li>ClassicStart</li>
+				</tags>
+				<researchViewX>0</researchViewX>
+				<researchViewY>1</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>
@@ -84,7 +108,7 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
+<!-- 	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="RFF_Farming"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -101,7 +125,7 @@
 				<researchViewY>3</researchViewY>
 			</ResearchProjectDef>
 		</value>
-	</Operation>
+	</Operation> -->
 
 <!-- 	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="Beekeeping"]</xpath>
@@ -135,7 +159,7 @@
 				<label>Flowers and Trees</label>
 				<description>Research extra Flowers and Trees to plant.</description>
 				<descriptionDiscovered>You can now plant more types of flowers as well as exotic trees.</descriptionDiscovered>
-				<baseCost>150</baseCost>
+				<baseCost>300</baseCost>
 				<techLevel>Neolithic</techLevel>
 				<prerequisites>
 					<li>agriculture</li>
@@ -161,7 +185,6 @@
 				<baseCost>150</baseCost>
 				<techLevel>Neolithic</techLevel>
 				<tags>
-					<li>TribalStart</li>
 					<li>MedievalStart</li>
 					<li>ClassicStart</li>
 				</tags>
@@ -209,7 +232,6 @@
 				<baseCost>200</baseCost>
 				<techLevel>Neolithic</techLevel>
 				<tags>
-					<li>TribalStart</li>
 					<li>MedievalStart</li>
 					<li>ClassicStart</li>
 				</tags>
@@ -233,7 +255,6 @@
 				<baseCost>300</baseCost>
 				<techLevel>Neolithic</techLevel>
 				<tags>
-					<li>TribalStart</li>
 					<li>MedievalStart</li>
 					<li>ClassicStart</li>
 				</tags>

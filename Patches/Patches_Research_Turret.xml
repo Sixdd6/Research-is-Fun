@@ -150,7 +150,7 @@
 				<label>Precision Turrets</label>
 				<description>Allows the production of long range Precision turrets.</description>
 				<baseCost>4000</baseCost>
-				<techLevel>Industrial</techLevel>
+				<techLevel>Spacer</techLevel>
 				<prerequisites>
 					<li>ShredderTurret</li>
 					<li>ChargedShot</li>
@@ -171,7 +171,7 @@
 				<label>Blast Turrets</label>
 				<description>Allows the production of quite fearful Blast turrets.</description>
 				<baseCost>5000</baseCost>
-				<techLevel>Industrial</techLevel>
+				<techLevel>Spacer</techLevel>
 				<prerequisites>
 					<li>PrecisionTurret</li>
 				</prerequisites>
@@ -191,7 +191,7 @@
 				<label>Vulcan Cannon</label>
 				<description>Allows the production of Vulcan cannons.</description>
 				<baseCost>6000</baseCost>
-				<techLevel>Industrial</techLevel>
+				<techLevel>Spacer</techLevel>
 				<prerequisites>
 					<li>BlastTurret</li>
 					<li>MultibarrelWeapons</li>

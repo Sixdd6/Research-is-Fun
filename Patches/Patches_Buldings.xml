@@ -132,14 +132,139 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationInsert">
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<Operations>
+			<li Class="PatchOperationRemove">
+				<xpath>*/ThingDef[defName="FertilizerMachine"]</xpath>
+			</li>
+		</Operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<Operations>
+			<li Class="PatchOperationRemove">
+				<xpath>*/TerrainDef[defName="VG_SoilTilled"]</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>*/TerrainDef[defName="PlaceSoil"]</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>*/TerrainDef[defName="ReclaimSoil"]</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>*/TerrainDef[defName="PlowSoil"]</xpath>
+			</li>
+		</Operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<Operations>
+			<li Class="PatchOperationRemove">
+				<xpath>ResearchProjectDefs/ResearchProjectDef[defName="SoilReclam"]</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>ResearchProjectDefs/ResearchProjectDef[defName="SoilReclamII"]</xpath>
+			</li>
+		</Operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<Operations>
+			<li Class="PatchOperationReplace">
+				<xpath>*/TerrainDef[defName="Dirt"]/Fertility</xpath>
+				<value>
+					<Fertility>1.0</Fertility>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/TerrainDef[defName="Dirt"]/label</xpath>
+				<value>
+					<label>Soil</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/TerrainDef[defName="Dirt"]/designationCategory</xpath>
+				<value>
+					<designationCategory>GardenTools</designationCategory>
+				</value>
+			</li>
+		</Operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<Operations>
+			<li Class="PatchOperationInsert">
+				<xpath>*/TerrainDef[defName="GT_SoilTilled"]/defName</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>terrainRehab</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/TerrainDef[defName="GT_SoilTilled"]/Fertility</xpath>
+				<value>
+					<Fertility>1.5</Fertility>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/TerrainDef[defName="GT_SoilTilled"]/label</xpath>
+				<value>
+					<label>Tilled Soil</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/TerrainDef[defName="GT_SoilTilled"]/designationCategory</xpath>
+				<value>
+					<designationCategory>GardenTools</designationCategory>
+				</value>
+			</li>
+		</Operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<Operations>
+			<li Class="PatchOperationReplace">
+				<xpath>*/TerrainDef[defName="SoilSuper"]/designationCategory</xpath>
+				<value>
+					<designationCategory>GardenTools</designationCategory>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/TerrainDef[defName="SoilMega"]/designationCategory</xpath>
+				<value>
+					<designationCategory>GardenTools</designationCategory>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/TerrainDef[defName="SoilHyper"]/designationCategory</xpath>
+				<value>
+					<designationCategory>GardenTools</designationCategory>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/TerrainDef[defName="UltraSoil"]/designationCategory</xpath>
+				<value>
+					<designationCategory>GardenTools</designationCategory>
+				</value>
+			</li>
+		</Operations>
+	</Operation>
+
+<!-- 	<Operation Class="PatchOperationInsert">
 		<xpath>*/ThingDef[DefName="FM_BasicManagerStation"]/DefName</xpath>
 		<value>
 			<researchPrerequisites><li>RIF_Research_IndustrialTech</li></researchPrerequisites>
 		</value>
-	</Operation>
+	</Operation> -->
 
-	<Operation Class="PatchOperationSequence">
+<!-- 	<Operation Class="PatchOperationSequence">
 		<success>Always</success>
 		<Operations>
 			<li Class="PatchOperationTest">
@@ -202,6 +327,6 @@
 				<xpath>*/ThingDef[defName="RBB_Boardwalk"]/costList</xpath>
 			</li>
 		</Operations>
-	</Operation>
+	</Operation> -->
 
 </Patch>

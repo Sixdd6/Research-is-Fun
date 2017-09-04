@@ -8,13 +8,41 @@
 				<defName>VG_GlitterMeds</defName>
 				<label>Glitterworld Medicine</label>
 				<description>Allows you to craft glitterworld medicine.</description>
-				<baseCost>10000</baseCost>
+				<baseCost>15000</baseCost>
 				<techLevel>Transcendent</techLevel>
 				<prerequisites>
+					<li>RIF_TranscendentConcepts</li>
 					<li>MedicineProduction</li>
 				</prerequisites>
 				<tab>TranscendentEra</tab>
-				<researchViewX>0</researchViewX>
+				<requiredResearchFacilities>
+					<li>AdvancedMultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<researchViewX>1</researchViewX>
+				<researchViewY>2.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="ultrasoil"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>ultrasoil</defName>
+				<label>Farming V</label>
+				<description>It won't be cost efficient nor easy, but we've stumbled upon an approach to improve the mycellium further and i mean MUCH further.\n\nSadly most people wouldn't be keen on the membrane materials it needs.</description>
+				<baseCost>25000</baseCost>
+				<techLevel>Transcendent</techLevel>
+				<prerequisites>
+					<li>VG_GlitterMeds</li>
+					<li>hypersoil</li>
+				</prerequisites>
+				<tab>TranscendentEra</tab>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>AdvancedMultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<researchViewX>2</researchViewX>
 				<researchViewY>2.5</researchViewY>
 			</ResearchProjectDef>
 		</value>
@@ -32,6 +60,7 @@
 				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 				<requiredResearchFacilities>
 					<li>MultiAnalyzer</li>
+					<li>AdvancedMultiAnalyzer</li>
 				</requiredResearchFacilities>
 				<prerequisites>
 					<li>SyntheticOrgans</li>
@@ -56,6 +85,7 @@
 				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 				<requiredResearchFacilities>
 					<li>MultiAnalyzer</li>
+					<li>AdvancedMultiAnalyzer</li>
 				</requiredResearchFacilities>
 				<prerequisites>
 					<li>SyntheticOrgans</li>
@@ -83,6 +113,7 @@
 				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 				<requiredResearchFacilities>
 					<li>MultiAnalyzer</li>
+					<li>AdvancedMultiAnalyzer</li>
 				</requiredResearchFacilities>
 				<tab>TranscendentEra</tab>
 				<researchViewX>2</researchViewX>
@@ -115,26 +146,6 @@
 	</Operation> -->
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>*/ResearchProjectDef[defName="MRE_Tier4_Robotics"]</xpath>
-		<value>
-			<ResearchProjectDef>
-				<defName>MRE_Tier4_Robotics</defName>
-				<label>Robotics: Tier 4 Robots</label>
-				<description>Further research reveals construction of intelligent robots capable of many tasks that they learn through experience.</description>
-				<baseCost>15000</baseCost>
-				<techLevel>Transcendent</techLevel>
-				<prerequisites>
-					<li>MRE_Tier3_Robotics</li>
-					<li>NeurotrainerMaking</li>
-				</prerequisites>
-				<tab>TranscendentEra</tab>
-				<researchViewX>3</researchViewX>
-				<researchViewY>3.5</researchViewY>
-			</ResearchProjectDef>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="ArtCraftingII"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -151,10 +162,36 @@
 				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 				<requiredResearchFacilities>
 					<li>MultiAnalyzer</li>
+					<li>AdvancedMultiAnalyzer</li>
 				</requiredResearchFacilities>
 				<tab>TranscendentEra</tab>
 				<researchViewX>3</researchViewX>
-				<researchViewY>4.15</researchViewY>
+				<researchViewY>3.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="MRE_Tier4_Robotics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>MRE_Tier4_Robotics</defName>
+				<label>Robotics: Tier 4 Robots</label>
+				<description>Research into how robots think and create art reveals construction of intelligent robots capable of learning from their experiences. These robots require an AI core to function.</description>
+				<baseCost>20000</baseCost>
+				<techLevel>Transcendent</techLevel>
+				<prerequisites>
+					<li>MRE_Tier3_Robotics</li>
+					<li>ArtCraftingII</li>
+				</prerequisites>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+					<li>AdvancedMultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<tab>TranscendentEra</tab>
+				<researchViewX>4</researchViewX>
+				<researchViewY>3.5</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>
@@ -166,15 +203,19 @@
 				<defName>ResearchProject_RTMagneticShield</defName>
 				<label>Solar Flare Shielding</label>
 				<description>Allows construction of a magnetic shield to protect electric devices in the entire colony from solar flares.</description>
-				<baseCost>15000</baseCost>
+				<baseCost>25000</baseCost>
 				<techLevel>Transcendent</techLevel>
 				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 				<prerequisites>
 				    <li>NeurotrainerMaking</li>
 				</prerequisites>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+					<li>AdvancedMultiAnalyzer</li>
+				</requiredResearchFacilities>
 				<tab>TranscendentEra</tab>
 				<researchViewX>3</researchViewX>
-				<researchViewY>4.65</researchViewY>
+				<researchViewY>4</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>

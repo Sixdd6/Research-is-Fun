@@ -2,20 +2,24 @@
 <Patch>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>*/ResearchProjectDef[defName="VG_ClothII"]</xpath>
+		<xpath>*/ResearchProjectDef[defName="ScientistsCabinet"]</xpath>
 		<value>
 			<ResearchProjectDef>
-				<defName>VG_ClothII</defName>
-				<label>Hyperweave</label>
-				<description>Researches methods of weaving hyperweave.\n Unlocks the recipe for hyperweave at the loom.</description>
-				<baseCost>10000</baseCost>
+				<defName>ScientistsCabinet</defName>
+				<label>Scientists Cabinet</label>
+				<description>Allows building of the most technologically advanced cabinets available on Glitterworlds.</description>
+				<baseCost>1500</baseCost>
 				<techLevel>Ultra</techLevel>
 				<prerequisites>
-					<li>VG_ClothI</li>
+					<li>RIF_UltraConcepts</li>
+					<li>MechanicsCabinet</li>
 				</prerequisites>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
 				<tab>UltraEra</tab>
-				<researchViewX>0</researchViewX>
-				<researchViewY>3.5</researchViewY>
+				<researchViewX>1</researchViewX>
+				<researchViewY>1.35</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>
@@ -185,17 +189,39 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>*/ResearchProjectDef[defName="MRE_Tier3_Robotics"]</xpath>
+		<xpath>*/ResearchProjectDef[defName="GlittertechRefurbishment"]</xpath>
 		<value>
 			<ResearchProjectDef>
-				<defName>MRE_Tier3_Robotics</defName>
-				<label>Robotics: Tier 3 Robots</label>
-				<description>Further research reveals construction of building and doctoring robots.</description>
+				<defName>GlittertechRefurbishment</defName>
+				<label>Glittertech Refurbishment</label>
+				<description>Knowledge how to sterilze &amp; refurbish reclaimed bionics of Glittertech complexity.</description>
+				<baseCost>12000</baseCost>
+				<techLevel>Ultra</techLevel>
+				<tab>UltraEra</tab>
+				<prerequisites>
+					<li>SyntheticOrgans</li>
+					<li>GlittertechHarvesting</li>
+				</prerequisites>
+				<researchViewX>3</researchViewX>
+				<researchViewY>3</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="PowerManagementSoftware"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>PowerManagementSoftware</defName>
+				<label>Power Management Software</label>
+				<description>Enhance robot software with power regulation algorithms. This unlocks more advanced robotics.</description>
 				<baseCost>10000</baseCost>
 				<techLevel>Ultra</techLevel>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 				<prerequisites>
-					<li>MRE_Tier2_Robotics</li>
 					<li>RIF_UltraConcepts</li>
+					<li>AutonomySoftware2</li>
+					<li>MRE_Tier2_Robotics</li>
 				</prerequisites>
 				<tab>UltraEra</tab>
 				<researchViewX>1</researchViewX>
@@ -216,15 +242,79 @@
 				<prerequisites>
 					<li>ArtCraftingI</li>
 					<li>AutonomousCookingI</li>
-					<li>RIF_UltraConcepts</li>
+					<li>PowerManagementSoftware</li>
 				</prerequisites>
 				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 				<requiredResearchFacilities>
 					<li>MultiAnalyzer</li>
 				</requiredResearchFacilities>
 				<tab>UltraEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>4</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="MRE_Tier3_Robotics"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>MRE_Tier3_Robotics</defName>
+				<label>Robotics: Tier 3 Robots</label>
+				<description>Power management subroutines have led to applications in firefighting and medicine.</description>
+				<baseCost>15000</baseCost>
+				<techLevel>Ultra</techLevel>
+				<prerequisites>
+					<li>AutonomousOverclockingI</li>
+					<li>VitalsMonitor</li>
+				</prerequisites>
+				<tab>UltraEra</tab>
+				<researchViewX>3</researchViewX>
+				<researchViewY>4</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="VG_ClothII"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>VG_ClothII</defName>
+				<label>Hyperweave</label>
+				<description>Researches methods of weaving hyperweave.\nUnlocks the recipe for hyperweave at the loom.</description>
+				<baseCost>15000</baseCost>
+				<techLevel>Ultra</techLevel>
+				<prerequisites>
+					<li>RIF_UltraConcepts</li>
+					<li>VG_ClothI</li>
+				</prerequisites>
+				<tab>UltraEra</tab>
 				<researchViewX>1</researchViewX>
 				<researchViewY>4.65</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="hypersoil"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>hypersoil</defName>
+				<label>Farming IV</label>
+				<description>Grow things unnaturally fast by using this vastly improved mycelium network which drills into the xylem of the plants to release nutrients and enzymes into the host.</description>
+				<baseCost>15000</baseCost>
+				<techLevel>Ultra</techLevel>
+				<prerequisites>
+					<li>RIF_UltraConcepts</li>
+					<li>megasoil</li>
+				</prerequisites>
+				<tab>UltraEra</tab>
+				<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+				<requiredResearchFacilities>
+					<li>MultiAnalyzer</li>
+				</requiredResearchFacilities>
+				<researchViewX>1</researchViewX>
+				<researchViewY>5.15</researchViewY>
 			</ResearchProjectDef>
 		</value>
 	</Operation>

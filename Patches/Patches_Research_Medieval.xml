@@ -44,12 +44,12 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>*/ResearchProjectDef[defName="SoilReclam"]</xpath>
+		<xpath>*/ResearchProjectDef[defName="terrainRehab"]</xpath>
 		<value>
 			<ResearchProjectDef>
-				<defName>SoilReclam</defName>
-				<label>Soil Reclamation I</label>
-				<description>Researches methods of making farmable soil. \n\nUnlocks placing soil on smoothed stone and other finished flooring. \n\nUnlocks Floor menus Place Soil and Garden Soil.</description>
+				<defName>terrainRehab</defName>
+				<label>Farming I</label>
+				<description>Researches methods of making farmable soil.\n\nUnlocks placing soil on smoothed stone and other surfaces.\n\nUnlocks Soil and Tilled Soil floor types in Garden Tools.</description>
 				<prerequisites>
 					<li>agricultureIII</li>
 				</prerequisites>
@@ -114,9 +114,9 @@
 		<value>
 			<ResearchProjectDef>
 				<defName>BasicProsthetics</defName>
-				<label>Crude Prosthetics</label>
+				<label>Basic Prosthetics</label>
 				<description>Understanding the shape of a leg and combining that knowledge with basic woodworking, you can now craft peg legs and other basic prostheses.</description>
-				<baseCost>600</baseCost>
+				<baseCost>500</baseCost>
 				<techLevel>Medieval</techLevel>
 				<prerequisites>
 					<li>RIF_Research_MedievalTech</li>
@@ -132,6 +132,51 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="BasicRefurbishment"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>BasicRefurbishment</defName>
+				<label>Basic Refurbishment</label>
+				<description>Knowledge how to sterilze &amp; refurbish reclaimed parts of basic complexity.</description>
+				<baseCost>600</baseCost>
+				<techLevel>Medieval</techLevel>
+				<tab>MedievalEra</tab>
+				<researchViewX>2</researchViewX>
+				<researchViewY>2.5</researchViewY>
+				<prerequisites>
+					<li>BasicProsthetics</li>
+					<li>BasicHarvesting</li>
+				</prerequisites>        
+				<tags>
+					<li>ClassicStart</li>
+				</tags>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ResearchProjectDef[defName="AdvancedHarvesting"]</xpath>
+		<value>
+			<ResearchProjectDef>
+				<defName>AdvancedHarvesting</defName>
+				<label>Advanced Harvesting</label>
+				<description>Knowledge how to extract parts of advanced complexity from corpses.</description>
+				<baseCost>750</baseCost>
+				<techLevel>Medieval</techLevel>
+				<tab>MedievalEra</tab>
+				<prerequisites>
+					<li>BasicRefurbishment</li>
+				</prerequisites>
+				<tags>
+					<li>ClassicStart</li>
+				</tags>
+				<researchViewX>3</researchViewX>
+				<researchViewY>2.5</researchViewY>
+			</ResearchProjectDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
 		<xpath>*/ResearchProjectDef[defName="SimpleAnimalProsthetics"]</xpath>
 		<value>
 			<ResearchProjectDef>
@@ -139,7 +184,7 @@
 				<label>Animal Prosthetics</label>
 				<description>Learn to use and craft simple animal prosthetics</description>
 				<baseCost>500</baseCost>
-				<techLevel>Neolithic</techLevel>
+				<techLevel>Medieval</techLevel>
 				<prerequisites>
 					<li>RIF_Research_MedievalTech</li>
 				</prerequisites>
@@ -167,26 +212,6 @@
 				</prerequisites>
 				<tab>MedievalEra</tab>
 				<researchViewX>1</researchViewX>
-				<researchViewY>3.5</researchViewY>
-			</ResearchProjectDef>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>*/ResearchProjectDef[defName="RFF_Terraforming"]</xpath>
-		<value>
-			<ResearchProjectDef>
-				<defName>RFF_Terraforming</defName>
-				<label>Terraforming</label>
-				<description>Terraforming represents knowledge of sophisticated irrigation and drainage methods which allow a wide variety of terrain conversions. Sand, marsh, mud or shallow water, for example, can be turned into farmable land. Artificial lakes can be created. And stone floors can be broken up and turned into actual soil.</description>
-				<baseCost>750</baseCost>
-				<techLevel>Medieval</techLevel>
-				<prerequisites>
-					<li>Stonecutting</li>
-					<li>RFF_Farming</li>
-				</prerequisites>
-				<tab>MedievalEra</tab>
-				<researchViewX>2</researchViewX>
 				<researchViewY>3.5</researchViewY>
 			</ResearchProjectDef>
 		</value>
